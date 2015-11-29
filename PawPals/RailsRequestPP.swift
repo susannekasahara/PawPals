@@ -43,6 +43,26 @@ class RailsRequest: NSObject {
         
         requestWithInfo(info) { (returnedInfo) -> () in
             
+            func registerWithUsername(username: String, andPassword password: String, fullname: String, email: String) {
+                
+                var info = RequestInfo()
+                
+                info.endpoint = "/signup"
+                info.method = .POST
+                info.parameters = [
+                    
+                    
+                    "username" : username,
+                    "full_name" : fullname,
+                    "email" : email,
+                    "password" : password
+                    
+                ]
+                
+                requestWithInfo(info) { (returnedInfo) -> () in
+                    
+
+            
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
                 if let key = user["auth_token"] as? String {
