@@ -18,6 +18,7 @@
 		82728A461C0B41F000430839 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82728A451C0B41F000430839 /* login.storyboard */; };
 		82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A471C0B7E2300430839 /* PetPhotoTVC.swift */; };
 		82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4B1C0B82EA00430839 /* ProfileVC.swift */; };
+		82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		82728A451C0B41F000430839 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		82728A471C0B7E2300430839 /* PetPhotoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetPhotoTVC.swift; sourceTree = "<group>"; };
 		82728A4B1C0B82EA00430839 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequestPP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				82728A381C0B40C300430839 /* LaunchScreen.storyboard */,
 				82728A3B1C0B40C300430839 /* Info.plist */,
 				82728A331C0B40C300430839 /* PawPals.xcdatamodeld */,
+				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
 			);
 			path = PawPals;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				82728A351C0B40C300430839 /* PawPals.xcdatamodeld in Sources */,
 				82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */,
 				82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */,
+				82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */,
 				82728A2F1C0B40C300430839 /* ViewController.swift in Sources */,
 				82728A421C0B419400430839 /* LoginVC.swift in Sources */,
 				82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */,
