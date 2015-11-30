@@ -43,7 +43,7 @@ class RailsRequest: NSObject {
         
         requestWithInfo(info) { (returnedInfo) -> () in
             
-            func registerWithUsername(username: String, andPassword password: String, fullname: String, email: String) {
+            func registerWithUsername(username: String, andPassword password: String, email: String, zipcode: String, petName:String, petAge: String) {
                 
                 var info = RequestInfo()
                 
@@ -53,15 +53,16 @@ class RailsRequest: NSObject {
                     
                     
                     "username" : username,
-                    "full_name" : fullname,
+                    "zipcode" : fullname,
                     "email" : email,
-                    "password" : password
+                    "password" : password,
+                    "petname" : petName,
+                    "petage" : petAge
                     
                 ]
                 
                 requestWithInfo(info) { (returnedInfo) -> () in
                     
-
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
@@ -108,6 +109,53 @@ class RailsRequest: NSObject {
             
             
 }
+        if info.parameters.count > 0 {
+            
+            if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
+                
+                if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+                    
+                    request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
+                    
+                    let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                    
+                    request.HTTPBody = postData
+                    
+                }
+                
+            }
+            
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            // creates a task from request - based on network connectivity
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+                
+                
+                
+                // work with data returned
+                
+                if let data = data {
+                    
+                    // have data
+                    
+                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                        
+                        completion(returnedInfo: returnedInfo)
+                        
+                    }
+                    
+                } else {
+                    
+                    // no data: check for error and return alert from
+                }
+            }
+            task.resume()
+            
+        }
+        
+            }
+        }
+
 
         struct RequestInfo {
             
@@ -124,8 +172,4 @@ class RailsRequest: NSObject {
 }
 }
 }
-
-
-
-
 
