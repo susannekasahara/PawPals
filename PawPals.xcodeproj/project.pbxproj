@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826ADB031C0CECDD0020B974 /* MyPetVC.swift */; };
 		82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2C1C0B40C300430839 /* AppDelegate.swift */; };
 		82728A2F1C0B40C300430839 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2E1C0B40C300430839 /* ViewController.swift */; };
 		82728A321C0B40C300430839 /* PPUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82728A301C0B40C300430839 /* PPUser.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		826ADB031C0CECDD0020B974 /* MyPetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetVC.swift; sourceTree = "<group>"; };
 		82728A291C0B40C300430839 /* PawPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82728A2C1C0B40C300430839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82728A2E1C0B40C300430839 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				82728A451C0B41F000430839 /* login.storyboard */,
 				82728A411C0B419400430839 /* LoginVC.swift */,
 				82728A431C0B41BA00430839 /* RegisterVC.swift */,
+				826ADB031C0CECDD0020B974 /* MyPetVC.swift */,
 				82728A301C0B40C300430839 /* PPUser.storyboard */,
 				82728A471C0B7E2300430839 /* PetPhotoTVC.swift */,
 				82728A4B1C0B82EA00430839 /* ProfileVC.swift */,
@@ -163,6 +166,7 @@
 				82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */,
 				82728A2F1C0B40C300430839 /* ViewController.swift in Sources */,
 				82728A421C0B419400430839 /* LoginVC.swift in Sources */,
+				826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */,
 				82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */,
 				82728A441C0B41BA00430839 /* RegisterVC.swift in Sources */,
 			);
@@ -312,6 +316,7 @@
 				82728A401C0B40C300430839 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

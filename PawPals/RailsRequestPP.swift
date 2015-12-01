@@ -24,9 +24,11 @@ class RailsRequest: NSObject {
         set { _d.setObject(newValue, forKey: "token") }
         
         
-}
-
+    }
+    
     private let base = "http://enigmatic-tundra-6262.herokuapp.com/"
+    
+    
     func loginWithUsername(email: String, andPassword password: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
@@ -43,43 +45,52 @@ class RailsRequest: NSObject {
         
         requestWithInfo(info) { (returnedInfo) -> () in
             
-            func registerWithUsername(username: String, andPassword password: String, email: String, zipcode: String, petName:String, petAge: String) {
-                
-                var info = RequestInfo()
-                
-                info.endpoint = "/signup"
-                info.method = .POST
-                info.parameters = [
-                    
-                    
-                    "username" : username,
-                    "zipcode" : fullname,
-                    "email" : email,
-                    "password" : password,
-                    "petname" : petName,
-                    "petage" : petAge
-                    
-                ]
-                
-                requestWithInfo(info) { (returnedInfo) -> () in
-                    
+            
+            
+        }
+        
+    }
+    
+    func registerWithUsername(username: String, andPassword password: String, email: String, zipcode: String, petName:String, petAge: String) {
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "/signup"
+        info.method = .POST
+        info.parameters = [
+            
+            
+            "username" : username,
+            "zipcode" : zipcode,
+            "email" : email,
+            "password" : password,
+            "petname" : petName,
+            "petage" : petAge
+            
+        ]
+        
+        requestWithInfo(info) { (returnedInfo) -> () in
+            
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
                 if let key = user["auth_token"] as? String {
                     
                     self.token = key
-                    success(true)
+//                    success(true)
+                    
                 }
+                
             } else {
                 
-                success(false)
+//                success(false)
+                
             }
             
         }
         
-}
-
+    }
+    
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
         var fullURLString = base + info.endpoint
@@ -108,7 +119,7 @@ class RailsRequest: NSObject {
             request.setValue(token, forHTTPHeaderField: "Access-Token")
             
             
-}
+        }
         if info.parameters.count > 0 {
             
             if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
@@ -153,23 +164,20 @@ class RailsRequest: NSObject {
             
         }
         
-            }
-        }
-
-
-        struct RequestInfo {
-            
-            enum MethodType: String {
-                
-                case POST, GET, DELETE
-            }
-            
-            var endpoint: String!
-            var method: MethodType = .GET
-            var parameters: [String:AnyObject] = [:]
-            var query: [String:AnyObject] = [:]
-
-}
-}
+    }
 }
 
+
+struct RequestInfo {
+    
+    enum MethodType: String {
+        
+        case POST, GET, DELETE
+    }
+    
+    var endpoint: String!
+    var method: MethodType = .GET
+    var parameters: [String:AnyObject] = [:]
+    var query: [String:AnyObject] = [:]
+    
+}
