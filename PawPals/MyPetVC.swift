@@ -33,7 +33,7 @@ class MyPetVC: UIViewController {
     
     @IBAction func profilesubmitButton(sender: AnyObject) {
         
-        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let streetAddress = streetaddressField.text, let petDescription = petdescriptField.text else { return }
+        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let streetAddress = streetaddressField.text, let petDescription = petdescriptField.text, let picture = petpicField.image else { return }
     
         
         
