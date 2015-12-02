@@ -9,27 +9,61 @@
 import UIKit
 
 class MyPetVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBOutlet weak var petnameField: UITextField!
+    
+    @IBOutlet weak var petageField: UITextField!
+    
+    
+    @IBOutlet weak var petbreedField: UITextField!
+    
+    @IBOutlet weak var streetaddressField: UITextField!
+    
+    @IBOutlet weak var petdescriptField: UITextView!
+    
+    
+    @IBOutlet weak var petpicField: UIImageView!
+    
+    
+    @IBAction func takephotoButton(sender: AnyObject) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func galleryphotoButton(sender: AnyObject) {
     }
-    */
-
+    
+    @IBAction func profilesubmitButton(sender: AnyObject) {
+        
+        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let streetAddress = streetaddressField.text, let petDescription = petdescriptField.text else { return }
+    
+        
+        
+        RailsRequest.session().profileWithUsername(petName, petAge: petAge, petBreed: petBreed, streetAddress: streetAddress, petDescription:petDescription, success:  {
+            didProfile in
+            
+            if didProfile {
+                
+                let loginstoryboard = UIStoryboard(name: "loginStoryboard", bundle: nil)
+                
+                let VC = loginstoryboard.instantiateViewControllerWithIdentifier("VC")
+                
+                self.presentViewController(VC, animated: true, completion: nil)
+                
+                
+            } else {
+                
+                // throw an alert error that login failed
+                
+            }
+            
+        })
+    }
+    
+    
 }
+
+
+
+    
+    
+
+   

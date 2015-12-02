@@ -10,26 +10,42 @@ import UIKit
 
 class RegisterVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var emailRegField: UITextField!
     
+    @IBOutlet weak var passwordRegField: UITextField!
+    
+    @IBOutlet weak var zipcodeRegField: UITextField!
+    
+    @IBAction func nextButton(sender: AnyObject) {
+    
+    
+    
+    guard let email = emailRegField.text where !email.isEmpty else { return }
+    guard let password = passwordRegField.text where !password.isEmpty else { return }
+    guard let zipcode = zipcodeRegField.text where !zipcode.isEmpty else { return }
+    
+        RailsRequest.session().registerWithUsername(email, andPassword: password, zipcode: zipcode, success:  {
+            didRegister in
+            
+            if didRegister {
+    
+    let loginstoryboard = UIStoryboard(name: "loginStoryboard", bundle: nil)
+    
+    let VC = loginstoryboard.instantiateViewControllerWithIdentifier("VC")
+    
+    self.presentViewController(VC, animated: true, completion: nil)
+    
+    
+   } else {
+    
+    // throw an alert error that login failed
+    
+}
 
-    /*
-    // MARK: - Navigation
+})
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+

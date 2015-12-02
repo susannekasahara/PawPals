@@ -37,12 +37,7 @@
                                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-of-JSm">
-                                                        <rect key="frame" x="57" y="368" width="208" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cis-54-XCI">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cis-54-XCI">
                                                         <rect key="frame" x="57" y="412" width="208" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -54,6 +49,9 @@
                                                         <state key="normal" title="LOGIN">
                                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="loginButton:" destination="oqW-mO-H2n" eventType="touchUpInside" id="xx5-fy-P1y"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAWPALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-H4-bmM">
                                                         <rect key="frame" x="100" y="58" width="142" height="27"/>
@@ -71,6 +69,11 @@
                                                             <segue destination="wN8-dZ-qDY" kind="show" id="1CU-RS-oB0"/>
                                                         </connections>
                                                     </button>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ryanmcwilliam@gmail.com" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-of-JSm">
+                                                        <rect key="frame" x="57" y="358" width="208" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
@@ -83,6 +86,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="fw8-wb-jb4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailLoginField" destination="Cvb-of-JSm" id="Ckz-nR-tEw"/>
+                        <outlet property="passwordLoginField" destination="cis-54-XCI" id="mg2-Hb-VcB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICg-gE-dII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,11 +109,6 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-Ij-jqn">
                                 <rect key="frame" x="56" y="135" width="235" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-Lb-opo">
-                                <rect key="frame" x="56" y="178" width="235" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -132,13 +134,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-Mi-HO3">
                                 <rect key="frame" x="103" y="273" width="141" height="121"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-Lb-opo">
+                                <rect key="frame" x="56" y="173" width="235" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-50-wdV">
-                                <rect key="frame" x="117" y="417" width="112" height="35"/>
+                                <rect key="frame" x="233" y="80" width="112" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButton:" destination="wN8-dZ-qDY" eventType="touchUpInside" id="pKy-vl-u55"/>
                                     <segue destination="WbV-hv-0fb" kind="show" id="yfH-n1-cWg"/>
                                 </connections>
                             </button>
@@ -147,10 +155,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="DSC-yC-8Dw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailRegField" destination="0hK-Ij-jqn" id="mGq-xZ-QxN"/>
+                        <outlet property="passwordRegField" destination="DqY-Lb-opo" id="g7m-Yo-kX1"/>
+                        <outlet property="zipcodeRegField" destination="PsM-Rn-8ap" id="Vqq-lD-sox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDh-jG-uaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.5" y="498.5"/>
+            <point key="canvasLocation" x="1379.5" y="564.5"/>
         </scene>
         <!--Pet PhotoTVC-->
         <scene sceneID="9Ca-lr-Tva">
@@ -219,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1M-VG-8d5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2726.5" y="498.5"/>
+            <point key="canvasLocation" x="2763.5" y="498.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qhi-5s-c8Q">
@@ -253,12 +266,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pet name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-8p-TD2">
-                                <rect key="frame" x="77" y="132" width="196" height="30"/>
+                                <rect key="frame" x="139" y="123" width="144" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="breed" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rja-YJ-FWO">
-                                <rect key="frame" x="77" y="219" width="196" height="30"/>
+                                <rect key="frame" x="139" y="161" width="144" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -270,51 +283,73 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tE-YR-Lh2">
-                                <rect key="frame" x="77" y="175" width="196" height="30"/>
+                                <rect key="frame" x="298" y="123" width="64" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAV-Jm-YeF">
-                                <rect key="frame" x="104" y="257" width="152" height="133"/>
+                                <rect key="frame" x="20" y="85" width="106" height="106"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYl-Ao-xM9">
-                                <rect key="frame" x="95" y="406" width="76" height="30"/>
+                                <rect key="frame" x="35" y="210" width="76" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="PHOTO ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takephotoButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="QWE-o1-FxH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-Se-z7M">
-                                <rect key="frame" x="188" y="406" width="80" height="30"/>
+                                <rect key="frame" x="33" y="257" width="80" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="GALLERY">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="galleryphotoButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="m5Q-sM-uXx"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tell us about your pet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-T9-ISP">
-                                <rect key="frame" x="60" y="453" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-R4-0Z0">
-                                <rect key="frame" x="122" y="605" width="105" height="30"/>
+                                <rect key="frame" x="238" y="77" width="105" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="profilesubmitButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="S5L-JQ-moq"/>
                                     <segue destination="2V2-dX-iiW" kind="show" id="FjH-df-ucQ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="street address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MS7-Vf-nbS">
+                                <rect key="frame" x="139" y="205" width="144" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tell us about your pet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-T9-ISP">
+                                <rect key="frame" x="139" y="243" width="216" height="101"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="petageField" destination="5tE-YR-Lh2" id="oce-cp-RT1"/>
+                        <outlet property="petbreedField" destination="Rja-YJ-FWO" id="rqc-pa-VSn"/>
+                        <outlet property="petdescriptField" destination="ocf-T9-ISP" id="muO-Zw-J5c"/>
+                        <outlet property="petnameField" destination="e9h-8p-TD2" id="JSz-cz-hmC"/>
+                        <outlet property="petpicField" destination="BAV-Jm-YeF" id="QmV-hx-tNP"/>
+                        <outlet property="streetaddressField" destination="MS7-Vf-nbS" id="cUW-8R-u9a"/>
+                        <outlet property="submitprofileButton" destination="CPt-R4-0Z0" id="gx8-Pn-JqH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBt-6l-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807.5" y="498.5"/>
+            <point key="canvasLocation" x="1836.5" y="559.5"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="WaN-M4-ynh">
@@ -388,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ty4-cd-bSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270.5" y="498.5"/>
+            <point key="canvasLocation" x="2339.5" y="498.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02a-0P-zCm">

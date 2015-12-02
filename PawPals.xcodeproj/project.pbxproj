@@ -38,6 +38,7 @@
 		82728A471C0B7E2300430839 /* PetPhotoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetPhotoTVC.swift; sourceTree = "<group>"; };
 		82728A4B1C0B82EA00430839 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequestPP.swift; sourceTree = "<group>"; };
+		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = pplogin.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				82728A3B1C0B40C300430839 /* Info.plist */,
 				82728A331C0B40C300430839 /* PawPals.xcdatamodeld */,
 				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
+				82BCA8EF1C0E0D4200B88330 /* pplogin.playground */,
 			);
 			path = PawPals;
 			sourceTree = "<group>";

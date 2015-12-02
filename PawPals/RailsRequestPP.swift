@@ -26,7 +26,7 @@ class RailsRequest: NSObject {
         
     }
     
-    private let base = "http://enigmatic-tundra-6262.herokuapp.com/"
+    private let base = "https://pawpals.herokuapp.com/"
     
     
     func loginWithUsername(email: String, andPassword password: String, success: (Bool) -> ()) {
@@ -45,51 +45,93 @@ class RailsRequest: NSObject {
         
         requestWithInfo(info) { (returnedInfo) -> () in
             
+            print(returnedInfo)
+            
             
             
         }
         
     }
     
-    func registerWithUsername(username: String, andPassword password: String, email: String, zipcode: String, petName:String, petAge: String) {
+    func registerWithUsername(email: String, andPassword password: String, zipcode: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
         
-        info.endpoint = "/signup"
+        info.endpoint = "signup"
         info.method = .POST
         info.parameters = [
-            
-            
-            "username" : username,
-            "zipcode" : zipcode,
+    
+//            "zipcode" : zipcode,
             "email" : email,
             "password" : password,
-            "petname" : petName,
-            "petage" : petAge
-            
+                        
         ]
         
         requestWithInfo(info) { (returnedInfo) -> () in
             
+            print(returnedInfo)
             
-            if let user = returnedInfo?["user"] as? [String:AnyObject] {
+            
+            if let email = returnedInfo?["email"] as? [String:AnyObject] {
                 
-                if let key = user["auth_token"] as? String {
+                if let key = email["Access_Token"] as? String {
                     
                     self.token = key
-//                    success(true)
-                    
+                    success(true)
+                    print(self.token)
                 }
                 
             } else {
                 
-//                success(false)
+                success(false)
                 
             }
             
         }
         
     }
+    
+    func profileWithUsername(petName: String, petAge: String, petBreed: String, streetAddress: String, petDescription: String, success: (Bool) -> ()) {
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "signup"
+        info.method = .POST
+        info.parameters = [
+            
+            //            "zipcode" : zipcode,
+            "petname" : petName,
+            "petage" : petAge,
+            "petbreed" : petBreed,
+            "streetaddress" : streetAddress,
+            "petdescription": petDescription
+            
+        ]
+        
+        requestWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
+            
+            
+            if let petName = returnedInfo?["email"] as? [String:AnyObject] {
+                
+                if let key = petName["Access_Token"] as? String {
+                    
+                    self.token = key
+                    success(true)
+                    print(self.token)
+                }
+                
+            } else {
+                
+                success(false)
+                
+            }
+            
+        }
+        
+    }
+
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
