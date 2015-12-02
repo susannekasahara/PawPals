@@ -47,7 +47,20 @@ class RailsRequest: NSObject {
             
             print(returnedInfo)
             
-            
+            if let user = returnedInfo?["user"] as? [String:AnyObject] {
+                
+                if let key = user["access_token"] as? String {
+                    
+                    self.token = key
+                    success(true)
+                    print(self.token)
+                }
+                
+            } else {
+                
+                success(false)
+                
+            }
             
         }
         
@@ -72,9 +85,9 @@ class RailsRequest: NSObject {
             print(returnedInfo)
             
             
-            if let email = returnedInfo?["email"] as? [String:AnyObject] {
+            if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
-                if let key = email["Access_Token"] as? String {
+                if let key = user["access_token"] as? String {
                     
                     self.token = key
                     success(true)
@@ -103,7 +116,7 @@ class RailsRequest: NSObject {
             "name" : petName,
             "age" : petAge,
             "breed" : petBreed,
-            "streetaddress" : streetAddress,
+            //"streetaddress" : streetAddress,
             "description": petDescription,
 //            "petpicture" : petpictureField
             
@@ -114,21 +127,6 @@ class RailsRequest: NSObject {
             
             print(returnedInfo)
             
-            
-            if let petName = returnedInfo?["email"] as? [String:AnyObject] {
-                
-                if let key = petName["Access_Token"] as? String {
-                    
-                    self.token = key
-                    success(true)
-                    print(self.token)
-                }
-                
-            } else {
-                
-                success(false)
-                
-            }
             
         }
         

@@ -59,6 +59,12 @@ class MyPetVC: UIViewController {
     }
     
     
+    override func viewDidLoad() {
+        
+        print(RailsRequest.session().token)
+        
+    }
+    
 }
 
 

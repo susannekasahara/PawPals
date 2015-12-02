@@ -21,6 +21,7 @@
 		82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4B1C0B82EA00430839 /* ProfileVC.swift */; };
 		82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */; };
 		82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8F01C0F615A00B88330 /* MapViewController.swift */; };
+		82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B65F1C0FA4E400A32B2B /* keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequestPP.swift; sourceTree = "<group>"; };
 		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = pplogin.playground; sourceTree = "<group>"; };
 		82BCA8F01C0F615A00B88330 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		82D9B65F1C0FA4E400A32B2B /* keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		82728A201C0B40C300430839 = {
 			isa = PBXGroup;
 			children = (
+				82D9B65F1C0FA4E400A32B2B /* keys.swift */,
 				82728A2B1C0B40C300430839 /* PawPals */,
 				82728A2A1C0B40C300430839 /* Products */,
 			);
@@ -174,6 +177,7 @@
 				82728A421C0B419400430839 /* LoginVC.swift in Sources */,
 				826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */,
 				82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */,
+				82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */,
 				82728A441C0B41BA00430839 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
