@@ -344,7 +344,6 @@
                         <outlet property="petnameField" destination="e9h-8p-TD2" id="JSz-cz-hmC"/>
                         <outlet property="petpicField" destination="BAV-Jm-YeF" id="QmV-hx-tNP"/>
                         <outlet property="streetaddressField" destination="MS7-Vf-nbS" id="cUW-8R-u9a"/>
-                        <outlet property="submitprofileButton" destination="CPt-R4-0Z0" id="gx8-Pn-JqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBt-6l-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>

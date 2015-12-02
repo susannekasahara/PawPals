@@ -95,16 +95,16 @@ class RailsRequest: NSObject {
         
         var info = RequestInfo()
         
-        info.endpoint = "signup"
+        info.endpoint = "pets"
         info.method = .POST
         info.parameters = [
             
             //            "zipcode" : zipcode,
-            "petname" : petName,
-            "petage" : petAge,
-            "petbreed" : petBreed,
-            "streetaddress" : streetAddress,
-            "petdescription": petDescription
+            "name" : petName,
+            "age" : petAge,
+            "breed" : petBreed,
+          //  "streetaddress" : streetAddress,
+            "description": petDescription
             
         ]
         
