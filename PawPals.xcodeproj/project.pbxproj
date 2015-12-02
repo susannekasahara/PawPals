@@ -20,6 +20,7 @@
 		82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A471C0B7E2300430839 /* PetPhotoTVC.swift */; };
 		82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4B1C0B82EA00430839 /* ProfileVC.swift */; };
 		82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */; };
+		82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8F01C0F615A00B88330 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		82728A4B1C0B82EA00430839 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequestPP.swift; sourceTree = "<group>"; };
 		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = pplogin.playground; sourceTree = "<group>"; };
+		82BCA8F01C0F615A00B88330 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				82728A451C0B41F000430839 /* login.storyboard */,
+				82BCA8F01C0F615A00B88330 /* MapViewController.swift */,
 				82728A411C0B419400430839 /* LoginVC.swift */,
 				82728A431C0B41BA00430839 /* RegisterVC.swift */,
 				826ADB031C0CECDD0020B974 /* MyPetVC.swift */,
@@ -165,6 +168,7 @@
 				82728A351C0B40C300430839 /* PawPals.xcdatamodeld in Sources */,
 				82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */,
 				82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */,
+				82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */,
 				82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */,
 				82728A2F1C0B40C300430839 /* ViewController.swift in Sources */,
 				82728A421C0B419400430839 /* LoginVC.swift in Sources */,

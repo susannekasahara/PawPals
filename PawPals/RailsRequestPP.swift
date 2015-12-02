@@ -105,6 +105,7 @@ class RailsRequest: NSObject {
             "breed" : petBreed,
             "streetaddress" : streetAddress,
             "description": petDescription,
+//            "petpicture" : petpictureField
             
             
         ]
