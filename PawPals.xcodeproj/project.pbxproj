@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826ADB031C0CECDD0020B974 /* MyPetVC.swift */; };
 		82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2C1C0B40C300430839 /* AppDelegate.swift */; };
-		82728A2F1C0B40C300430839 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2E1C0B40C300430839 /* ViewController.swift */; };
 		82728A321C0B40C300430839 /* PPUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82728A301C0B40C300430839 /* PPUser.storyboard */; };
 		82728A351C0B40C300430839 /* PawPals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82728A331C0B40C300430839 /* PawPals.xcdatamodeld */; };
 		82728A371C0B40C300430839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82728A361C0B40C300430839 /* Assets.xcassets */; };
@@ -20,29 +19,36 @@
 		82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A471C0B7E2300430839 /* PetPhotoTVC.swift */; };
 		82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4B1C0B82EA00430839 /* ProfileVC.swift */; };
 		82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */; };
+		82975D551C13311A00728563 /* lostprofileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82975D541C13311A00728563 /* lostprofileVC.swift */; };
+		82975D581C13412C00728563 /* mylostpetMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82975D571C13412C00728563 /* mylostpetMapVC.swift */; };
 		82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8F01C0F615A00B88330 /* MapViewController.swift */; };
 		82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B65F1C0FA4E400A32B2B /* keys.swift */; };
+		82D9B68B1C120EDD00A32B2B /* palsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B68A1C120EDD00A32B2B /* palsTVC.swift */; };
+		82D9B68D1C1214EF00A32B2B /* lostpetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B68C1C1214EF00A32B2B /* lostpetVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		826ADB031C0CECDD0020B974 /* MyPetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetVC.swift; sourceTree = "<group>"; };
 		82728A291C0B40C300430839 /* PawPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		82728A2C1C0B40C300430839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82728A2E1C0B40C300430839 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82728A2C1C0B40C300430839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PawPals/AppDelegate.swift; sourceTree = "<group>"; };
 		82728A311C0B40C300430839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PPUser.storyboard; sourceTree = "<group>"; };
 		82728A341C0B40C300430839 /* PawPals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PawPals.xcdatamodel; sourceTree = "<group>"; };
-		82728A361C0B40C300430839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82728A361C0B40C300430839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PawPals/Assets.xcassets; sourceTree = "<group>"; };
 		82728A391C0B40C300430839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		82728A3B1C0B40C300430839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82728A3B1C0B40C300430839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = PawPals/Info.plist; sourceTree = "<group>"; };
 		82728A411C0B419400430839 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		82728A431C0B41BA00430839 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		82728A451C0B41F000430839 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		82728A471C0B7E2300430839 /* PetPhotoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetPhotoTVC.swift; sourceTree = "<group>"; };
 		82728A4B1C0B82EA00430839 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequestPP.swift; sourceTree = "<group>"; };
-		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = pplogin.playground; sourceTree = "<group>"; };
+		82975D541C13311A00728563 /* lostprofileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = lostprofileVC.swift; path = ../lostprofileVC.swift; sourceTree = "<group>"; };
+		82975D571C13412C00728563 /* mylostpetMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mylostpetMapVC.swift; sourceTree = "<group>"; };
+		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = pplogin.playground; path = PawPals/pplogin.playground; sourceTree = "<group>"; };
 		82BCA8F01C0F615A00B88330 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		82D9B65F1C0FA4E400A32B2B /* keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
+		82D9B68A1C120EDD00A32B2B /* palsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = palsTVC.swift; sourceTree = "<group>"; };
+		82D9B68C1C1214EF00A32B2B /* lostpetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = lostpetVC.swift; path = ../lostpetVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			children = (
 				82D9B65F1C0FA4E400A32B2B /* keys.swift */,
 				82728A2B1C0B40C300430839 /* PawPals */,
+				82975D561C133DD700728563 /* Files */,
 				82728A2A1C0B40C300430839 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,23 +84,33 @@
 			isa = PBXGroup;
 			children = (
 				82728A451C0B41F000430839 /* login.storyboard */,
-				82BCA8F01C0F615A00B88330 /* MapViewController.swift */,
 				82728A411C0B419400430839 /* LoginVC.swift */,
+				82BCA8F01C0F615A00B88330 /* MapViewController.swift */,
 				82728A431C0B41BA00430839 /* RegisterVC.swift */,
 				826ADB031C0CECDD0020B974 /* MyPetVC.swift */,
+				82D9B68A1C120EDD00A32B2B /* palsTVC.swift */,
 				82728A4B1C0B82EA00430839 /* ProfileVC.swift */,
+				82D9B68C1C1214EF00A32B2B /* lostpetVC.swift */,
+				82975D541C13311A00728563 /* lostprofileVC.swift */,
 				82728A471C0B7E2300430839 /* PetPhotoTVC.swift */,
+				82975D571C13412C00728563 /* mylostpetMapVC.swift */,
+				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
+			);
+			path = PawPals;
+			sourceTree = "<group>";
+		};
+		82975D561C133DD700728563 /* Files */ = {
+			isa = PBXGroup;
+			children = (
 				82728A301C0B40C300430839 /* PPUser.storyboard */,
-				82728A2E1C0B40C300430839 /* ViewController.swift */,
 				82728A2C1C0B40C300430839 /* AppDelegate.swift */,
 				82728A361C0B40C300430839 /* Assets.xcassets */,
 				82728A381C0B40C300430839 /* LaunchScreen.storyboard */,
 				82728A3B1C0B40C300430839 /* Info.plist */,
 				82728A331C0B40C300430839 /* PawPals.xcdatamodeld */,
-				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
 				82BCA8EF1C0E0D4200B88330 /* pplogin.playground */,
 			);
-			path = PawPals;
+			name = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,12 +186,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				82728A351C0B40C300430839 /* PawPals.xcdatamodeld in Sources */,
+				82D9B68B1C120EDD00A32B2B /* palsTVC.swift in Sources */,
 				82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */,
 				82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */,
+				82975D551C13311A00728563 /* lostprofileVC.swift in Sources */,
 				82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */,
+				82D9B68D1C1214EF00A32B2B /* lostpetVC.swift in Sources */,
 				82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */,
-				82728A2F1C0B40C300430839 /* ViewController.swift in Sources */,
 				82728A421C0B419400430839 /* LoginVC.swift in Sources */,
+				82975D581C13412C00728563 /* mylostpetMapVC.swift in Sources */,
 				826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */,
 				82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */,
 				82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */,
@@ -191,6 +211,7 @@
 				82728A311C0B40C300430839 /* Base */,
 			);
 			name = PPUser.storyboard;
+			path = PawPals;
 			sourceTree = "<group>";
 		};
 		82728A381C0B40C300430839 /* LaunchScreen.storyboard */ = {
@@ -199,6 +220,7 @@
 				82728A391C0B40C300430839 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = PawPals;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -337,7 +359,8 @@
 				82728A341C0B40C300430839 /* PawPals.xcdatamodel */,
 			);
 			currentVersion = 82728A341C0B40C300430839 /* PawPals.xcdatamodel */;
-			path = PawPals.xcdatamodeld;
+			name = PawPals.xcdatamodeld;
+			path = PawPals/PawPals.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -17,7 +17,6 @@ class MyPetVC: UIViewController {
     
     @IBOutlet weak var petbreedField: UITextField!
     
-    @IBOutlet weak var streetaddressField: UITextField!
     
     @IBOutlet weak var petdescriptField: UITextView!
     
@@ -33,20 +32,20 @@ class MyPetVC: UIViewController {
     
     @IBAction func profilesubmitButton(sender: AnyObject) {
         
-        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let streetAddress = streetaddressField.text, let petDescription = petdescriptField.text else { return }
+        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let petDescription = petdescriptField.text else { return }
     
         
         
-        RailsRequest.session().profileWithUsername(petName, petAge: petAge, petBreed: petBreed, streetAddress: streetAddress, petDescription:petDescription, success:  {
+        RailsRequest.session().profileWithUsername(petName, petAge: petAge, petBreed: petBreed, petDescription: petDescription, success:  {
             didProfile in
             
             if didProfile {
                 
-                let loginstoryboard = UIStoryboard(name: "loginStoryboard", bundle: nil)
+               // let loginstoryboard = UIStoryboard(name: "loginStoryboard", bundle: nil)
                 
-                let VC = loginstoryboard.instantiateViewControllerWithIdentifier("VC")
+                //let VC = loginstoryboard.instantiateViewControllerWithIdentifier("VC")
                 
-                self.presentViewController(VC, animated: true, completion: nil)
+               // self.presentViewController(VC, animated: true, completion: nil)
                 
                 
             } else {

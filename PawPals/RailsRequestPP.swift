@@ -28,7 +28,7 @@ class RailsRequest: NSObject {
     
     private let base = "https://pawpals.herokuapp.com/"
     
-    
+    //login
     func loginWithUsername(email: String, andPassword password: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
@@ -65,8 +65,8 @@ class RailsRequest: NSObject {
         }
         
     }
-    
-    func registerWithUsername(email: String, andPassword password: String, zipcode: String, success: (Bool) -> ()) {
+    //register
+    func registerWithUsername(email: String, andPassword password: String, streetaddress: String, city: String, state: String, zipcode: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
         
@@ -74,7 +74,6 @@ class RailsRequest: NSObject {
         info.method = .POST
         info.parameters = [
     
-//            "zipcode" : zipcode,
             "email" : email,
             "password" : password,
                         
@@ -92,6 +91,13 @@ class RailsRequest: NSObject {
                     self.token = key
                     success(true)
                     print(self.token)
+                    
+                    //request address
+                    RailsRequest.session().addressWithUsername(streetaddress, city: city, state: state, zipcode: zipcode, success: { (success) -> () in
+                        
+                        // finished saving address
+                        
+                    })
                 }
                 
             } else {
@@ -103,8 +109,32 @@ class RailsRequest: NSObject {
         }
         
     }
-    
-    func profileWithUsername(petName: String, petAge: String, petBreed: String, streetAddress: String, petDescription: String, success: (Bool) -> ()) {
+    //setup address
+    func addressWithUsername(streetaddress: String, city: String, state: String, zipcode: String, success: (Bool) -> ()) {
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "addresses"
+        info.method = .POST
+        info.parameters = [
+            
+            "street_address" : streetaddress,
+            "city" : city,
+            "state" : state,
+            "zip" : zipcode,
+            
+            
+        ]
+        
+        requestWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
+            success(true)
+            
+        }
+    }
+    //SET UP PET Profile
+    func profileWithUsername(petName: String, petAge: String, petBreed: String, petDescription: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
         
@@ -112,14 +142,11 @@ class RailsRequest: NSObject {
         info.method = .POST
         info.parameters = [
             
-            //            "zipcode" : zipcode,
+            
             "name" : petName,
             "age" : petAge,
             "breed" : petBreed,
-            //"streetaddress" : streetAddress,
             "description": petDescription,
-//            "petpicture" : petpictureField
-            
             
         ]
         
@@ -131,7 +158,6 @@ class RailsRequest: NSObject {
         }
         
     }
-
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
