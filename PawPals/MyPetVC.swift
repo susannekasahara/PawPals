@@ -41,16 +41,10 @@ class MyPetVC: UIViewController {
             
             if didProfile {
                 
-               // let loginstoryboard = UIStoryboard(name: "loginStoryboard", bundle: nil)
-                
-                //let VC = loginstoryboard.instantiateViewControllerWithIdentifier("VC")
-                
-               // self.presentViewController(VC, animated: true, completion: nil)
-                
                 
             } else {
                 
-                // throw an alert error that login failed
+                
                 
             }
             

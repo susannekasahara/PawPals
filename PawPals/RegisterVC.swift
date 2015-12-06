@@ -25,12 +25,7 @@ class RegisterVC: UIViewController {
     
     
     
-    guard let email = emailRegField.text where !email.isEmpty else { return }
-    guard let password = passwordRegField.text where !password.isEmpty else { return }
-    guard let zipcode = zipcodeRegField.text where !zipcode.isEmpty else { return }
-    guard let streetaddress = streetaddressField.text where !streetaddress.isEmpty else { return }
-    guard let city = cityField.text where !city.isEmpty else { return }
-    guard let state = stateField.text where !state.isEmpty else { return }
+    guard let email = emailRegField.text,let password = passwordRegField.text, let zipcode = zipcodeRegField.text, let streetaddress = streetaddressField.text, let city = cityField.text, let state = stateField.text else { return }
         
     
         RailsRequest.session().registerWithUsername(email, andPassword: password, streetaddress: streetaddress, city: city, state: state, zipcode: zipcode, success:  {
@@ -38,17 +33,10 @@ class RegisterVC: UIViewController {
             
             if didRegister {
     
-   // let loginstoryboard = UIStoryboard(name: "login", bundle: nil)
-    
-   // let VC = loginstoryboard.instantiateViewControllerWithIdentifier("VC")
-    
-    //self.presentViewController(VC, animated: true, completion: nil)
-    
-    
+       
    } else {
     
-    // throw an alert error that login failed
-    
+        
 }
 
 })

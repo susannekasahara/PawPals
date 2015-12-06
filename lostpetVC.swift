@@ -31,7 +31,12 @@ class lostpetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let homeLocButton(<#T##sender: AnyObject##AnyObject#>)
+        guard let lostAddress = streetAddressLost.text, let cityLost = cityLost.text, let stateLost = stateLost.text, let zipLost = zipLost.text else { return }
+        
+        
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }

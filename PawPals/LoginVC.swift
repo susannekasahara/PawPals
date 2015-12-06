@@ -38,40 +38,4 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         })
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        emailLoginField.delegate = self
-        passwordLoginField.delegate = self
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
-            UIKeyboardWillShowNotification, object: nil);
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        
-    }
-    
-    func keyboardWillShow(sender: NSNotification) {
-        
-//        self.view.frame.origin.y = -220
-        
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        
-        self.view.frame.origin.y = 0
-        
-    }
-    
-    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
-    {
-        textField.resignFirstResponder()
-        return true;
-    }
 }
-
-
-
-
-
-
