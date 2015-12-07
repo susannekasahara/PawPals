@@ -45,22 +45,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         for location in locations {
             
             print(location.coordinate.latitude, location.coordinate.longitude)
-//            
-//            / - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
-//              if (annotation == mapView.userLocation) return nil;
-//            
-//            
-//            MKPinAnnotationView *annView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"];
-//            
-//            
-//            UIImage *annotationImage = [UIImage imageNamed:@"MyFileNameWhatever.png"];
-//            annView.image = annotationImage;
-//            annView.canShowCallout = YES;
-//            
-//            
-//            return annView;
-//            
-//                        }
             let annotation = MKPointAnnotation() //need MKAnnotationView
             
             annotation.coordinate = location.coordinate

@@ -8,12 +8,36 @@
 
 import UIKit
 
-class lostpetVC: UIViewController {
+import CoreLocation
+
+class lostpetVC: UIViewController, CLLocationManagerDelegate {
     
-    @IBAction func currentLocButton(sender: AnyObject) {
+    var latitude: CLLocationDegrees?
+    var longitude: CLLocationDegrees?
+    
+    @IBAction func currentLocButton(sender: AnyObject)
+        
+        
+    {
+        
+        // get lat and long from CLLocationManager using requestLocation
+        
+        guard let latitude = self.latitude else { return }
+        guard let longitude = self.longitude else { return }
+        
+        //broadcast lost dog location on currentLocation
+        
     }
     
     @IBAction func homeLocButton(sender: AnyObject) {
+        
+        // get lat and long from railsrequest singleton
+        
+        guard let latitude = self.latitude else { return }
+        guard let longitude = self.longitude else { return }
+        
+        //broadcast lost dog at home location
+
     }
 
     @IBOutlet weak var streetAddressLost: UITextField!
@@ -25,16 +49,40 @@ class lostpetVC: UIViewController {
     @IBOutlet weak var zipLost: UITextField!
     
     @IBAction func lostLocButton(sender: AnyObject) {
+    
+        // run clgeocoder
+        
+        guard let latitude = self.latitude else { return }
+        guard let longitude = self.longitude else { return }
+        
+        
+        
     }
+    
+        //broadcasr lost dog at new location
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let lostAddress = streetAddressLost.text, let cityLost = cityLost.text, let stateLost = stateLost.text, let zipLost = zipLost.text else { return }
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        guard let currentLocation = locationManager.location else { return }
+        
+        let latitude = Double(currentLocation.coordinate.latitude)
+        let longitude = Double(currentLocation.coordinate.longitude)
+        
+        self.latitude = latitude
+        self.longitude = longitude
+        
+        print("latitude \(latitude)")
+        print("longitude \(longitude)")
         
         
-        
+        //New Location
         
         
 
@@ -47,14 +95,5 @@ class lostpetVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
-}

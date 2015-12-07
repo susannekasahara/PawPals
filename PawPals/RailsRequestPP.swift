@@ -26,6 +26,8 @@ class RailsRequest: NSObject {
         
     }
     
+    // location
+    
     private let base = "https://pawpals.herokuapp.com/"
     
     //login
@@ -158,6 +160,14 @@ class RailsRequest: NSObject {
         }
         
     }
+    
+    //POST LOST PET @ NEW LOC
+    
+
+    //POST LOST PET CURRENT LOC
+    
+    
+    //POST LOST PET HOME LOC
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
