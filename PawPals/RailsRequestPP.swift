@@ -26,6 +26,18 @@ class RailsRequest: NSObject {
         
     }
     
+    var petID: String? {
+        
+        get { return _d.objectForKey("pet_id") as? String }
+        set { _d.setObject(newValue, forKey: "pet_id") }
+        
+        
+    }
+    
+    
+    
+    
+    
     // location
     
     private let base = "https://pawpals.herokuapp.com/"
@@ -160,6 +172,33 @@ class RailsRequest: NSObject {
         }
         
     }
+    
+    func locationManager(latitude: Double, longitude: Double, success: (Bool) -> ()) {
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "/pet_notices/:pet_id"
+        info.method = .POST
+        info.parameters = [
+            
+            "pet_id" : "6",
+            "longitude" : "\(longitude)",
+            "latitude" : "\(latitude)"
+            
+            
+        ]
+        
+        requestWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
+            
+            
+        }
+        
+    }
+
+        
+        
     
     //POST LOST PET @ NEW LOC
     

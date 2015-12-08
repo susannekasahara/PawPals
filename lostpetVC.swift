@@ -7,34 +7,43 @@
 //
 
 import UIKit
-
 import CoreLocation
+import MapKit
 
 class lostpetVC: UIViewController, CLLocationManagerDelegate {
     
-    var latitude: CLLocationDegrees?
-    var longitude: CLLocationDegrees?
+    let lManager = CLLocationManager()
+
+    @IBAction func currentLocButton(sender: AnyObject) {
+
+        lManager.delegate = self
+        
+        lManager.requestWhenInUseAuthorization()
+
+        lManager.requestLocation()
+
+    }
     
-    @IBAction func currentLocButton(sender: AnyObject)
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         
-    {
-        
-        // get lat and long from CLLocationManager using requestLocation
-        
-        guard let latitude = self.latitude else { return }
-        guard let longitude = self.longitude else { return }
-        
-        //broadcast lost dog location on currentLocation
-        
+        if let location = locations.first {
+            
+            print(location)
+            
+            RailsRequest.session().locationManager(location.coordinate.latitude, longitude: location.coordinate.longitude, success: { didLogin in
+                
+                // did send location
+                
+            })
+            
+        }
     }
     
     @IBAction func homeLocButton(sender: AnyObject) {
         
         // get lat and long from railsrequest singleton
         
-        guard let latitude = self.latitude else { return }
-        guard let longitude = self.longitude else { return }
         
         //broadcast lost dog at home location
 
@@ -52,8 +61,7 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
     
         // run clgeocoder
         
-        guard let latitude = self.latitude else { return }
-        guard let longitude = self.longitude else { return }
+        
         
         
         
@@ -66,25 +74,6 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let locationManager = CLLocationManager()
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        guard let currentLocation = locationManager.location else { return }
-        
-        let latitude = Double(currentLocation.coordinate.latitude)
-        let longitude = Double(currentLocation.coordinate.longitude)
-        
-        self.latitude = latitude
-        self.longitude = longitude
-        
-        print("latitude \(latitude)")
-        print("longitude \(longitude)")
-        
-        
-        //New Location
-        
-        
 
         // Do any additional setup after loading the view.
     }
@@ -95,5 +84,5 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
     }
     
 
-    }
+}
 

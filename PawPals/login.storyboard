@@ -48,7 +48,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="oqW-mO-H2n" eventType="touchUpInside" id="xx5-fy-P1y"/>
-                                            <segue destination="hq3-do-i2k" kind="show" id="571-Gx-jID"/>
+                                            <segue destination="hq3-do-i2k" kind="show" id="Pg0-XS-e0g"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAWPALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-H4-bmM">
@@ -287,7 +287,7 @@
         <!--Lost Pals-->
         <scene sceneID="qhi-5s-c8Q">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="hq3-do-i2k" customClass="MapViewController" customModule="PawPals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hq3-do-i2k" customClass="MapViewController" customModule="PawPals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DyB-Mg-2VR"/>
                         <viewControllerLayoutGuide type="bottom" id="rho-ab-5oa"/>
@@ -299,6 +299,16 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-t4-DgO">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-1S-D48">
+                                <rect key="frame" x="242" y="113" width="83" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="My Profile">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2V2-dX-iiW" kind="show" id="mAV-pk-iab"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -309,14 +319,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lost Pals" id="VZA-gL-bgW">
-                        <barButtonItem key="rightBarButtonItem" title="Profile" id="kM2-fK-wc3">
-                            <connections>
-                                <segue destination="2V2-dX-iiW" kind="show" id="9Pw-yV-Pnj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Lost Pals" id="VZA-gL-bgW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myMapView" destination="r2C-t4-DgO" id="qVA-cS-pP8"/>

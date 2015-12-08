@@ -45,6 +45,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         for location in locations {
             
             print(location.coordinate.latitude, location.coordinate.longitude)
+            
             let annotation = MKPointAnnotation() //need MKAnnotationView
             
             annotation.coordinate = location.coordinate
