@@ -15,14 +15,29 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
     var geocoder: CLGeocoder!
     
     let lManager = CLLocationManager()
+    
+    var lostCoordinate: CLLocationCoordinate2D?
 
     @IBAction func currentLocButton(sender: AnyObject) {
 
         lManager.delegate = self
         
         lManager.requestWhenInUseAuthorization()
-
+        
         lManager.requestLocation()
+        guard let loc = lManager.location else { return }
+        
+        RailsRequest.session().postLocation(loc.coordinate.latitude, longitude: loc.coordinate.longitude, present: true, success: { success in
+            
+            // did send location
+            if success {
+                print("success lost")
+                
+            } else {
+                print("fail lost")
+            }
+          
+        })
 
     }
     
@@ -33,14 +48,12 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
             
             print(location)
             
-            RailsRequest.session().postLocation(location.coordinate.latitude, longitude: location.coordinate.longitude, success: { didLogin in
-                
-                // did send location
-                
-            })
+            
             
         }
     }
+    
+    
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         
@@ -95,7 +108,7 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
                 var placemark: CLPlacemark = placemarks![0]
                 var location: CLLocation = placemark.location!
                 var coordinate: CLLocationCoordinate2D = location.coordinate
-                            }
+            }
         }
         self.lostLocButton.enabled = true
         

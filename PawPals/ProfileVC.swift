@@ -9,19 +9,38 @@
 import UIKit
 
 class ProfileVC: UIViewController {
+    
+    //var pet: [String: AnyObject] = [:]
+    
+    @IBOutlet weak var petpicImage: UIImageView!
 
+    @IBOutlet weak var petnameLabel: UILabel!
+    
+    
+    @IBOutlet weak var petageLabel: UILabel!
+    
+    @IBOutlet weak var petbreedLabel: UILabel!
+    
+    @IBOutlet weak var petcityLabel: UILabel!
+    
+    @IBOutlet weak var petstateLabel: UILabel!
+    
+    @IBOutlet weak var petdescriptionText: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //if let petname = pet["name"] as? String {
+        
+       // petnameLabel.text = petname
+            
+        }
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
+ 
     /*
     // MARK: - Navigation
 
@@ -32,4 +51,5 @@ class ProfileVC: UIViewController {
     }
     */
 
-}
+
+

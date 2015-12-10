@@ -101,10 +101,10 @@ class RailsRequest: NSObject {
         info.endpoint = "signup"
         info.method = .POST
         info.parameters = [
-    
+            
             "email" : email,
             "password" : password,
-                        
+            
         ]
         
         requestWithInfo(info) { (returnedInfo) -> () in
@@ -120,7 +120,7 @@ class RailsRequest: NSObject {
                     success(true)
                     print(self.token)
                     
-            
+                    
                     
                     // set lat and lon
                     
@@ -194,9 +194,9 @@ class RailsRequest: NSObject {
                     
                     self.petID = key
                     success(true)
-                    print(self.token)
-            
-            // use "pet_id" to set "petID"
+                    print(self.petID)
+                    
+                    // use "pet_id" to set "petID"
                     
                 }
                 
@@ -207,17 +207,18 @@ class RailsRequest: NSObject {
         
     }
     //LOCATION OF LOST PET CURRENT, HOME, NEW ADDRESS
-    func postLocation(latitude: Double, longitude: Double, success: (Bool) -> ()) {
+    func postLocation(latitude: Double, longitude: Double, present: Bool = true, success: (Bool) -> ()) {
         
         guard let petID = petID else { return success(false) }
         
         var info = RequestInfo()
         
-        info.endpoint = "/pet_notices/" + petID
+        info.endpoint = "pet_notices/" + petID
         info.method = .POST
         info.parameters = [
             
             "pet_id" : petID,
+            "present" : present,
             "longitude" : "\(longitude)",
             "latitude" : "\(latitude)"
             
@@ -227,12 +228,12 @@ class RailsRequest: NSObject {
         requestWithInfo(info) { (returnedInfo) -> () in
             
             print(returnedInfo)
-            success(true)
+            //            success(true)
             
         }
         
     }
-
+    
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
@@ -263,6 +264,7 @@ class RailsRequest: NSObject {
             
             
         }
+        
         if info.parameters.count > 0 {
             
             if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
@@ -279,36 +281,46 @@ class RailsRequest: NSObject {
                 
             }
             
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // creates a task from request - based on network connectivity
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
             
-            // creates a task from request - based on network connectivity
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+            print(data)
+            print(error)
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                // work with data returned
+                
+                if let data = data {
                     
-                    // work with data returned
-                    
-                    if let data = data {
+                    // have data
+                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
                         
-                        // have data
-                        if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
-                            
-                            completion(returnedInfo: returnedInfo)
-                            
-                        }
+                        completion(returnedInfo: returnedInfo)
                         
                     } else {
                         
-                        // no data: check for error and return alert from
+                        completion(returnedInfo: nil)
+                        
                     }
                     
-                })
+                } else {
+                    
+                    // no data: check for error and return alert from
+                    
+                    completion(returnedInfo: nil)
+                    
+                }
                 
-            }
-            
-            task.resume()
+            })
             
         }
+        
+        task.resume()
         
     }
 }
@@ -327,3 +339,5 @@ struct RequestInfo {
     var query: [String:AnyObject] = [:]
     
 }
+
+

@@ -34,7 +34,7 @@ class MyPetVC: UIViewController {
         
         guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let petDescription = petdescriptField.text else { return }
     
-        
+        print("registerig pet")
         
         RailsRequest.session().profileWithUsername(petName, petAge: petAge, petBreed: petBreed, petDescription: petDescription, success:  {
             didProfile in

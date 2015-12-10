@@ -20,13 +20,6 @@
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-A8-agW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="RQu-ec-l9N">
-                                        <rect key="frame" x="32" y="194" width="312" height="671"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="312" id="POt-HQ-jzK"/>
-                                            <constraint firstAttribute="height" constant="671" id="QNJ-3G-chv"/>
-                                        </constraints>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cis-54-XCI">
                                         <rect key="frame" x="32" y="199" width="311" height="30"/>
                                         <constraints>
@@ -48,6 +41,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="oqW-mO-H2n" eventType="touchUpInside" id="xx5-fy-P1y"/>
+                                            <segue destination="hq3-do-i2k" kind="show" id="BSk-k6-sxM"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAWPALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-H4-bmM">
@@ -89,6 +83,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="RQu-ec-l9N">
+                                        <rect key="frame" x="32" y="173" width="312" height="671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="312" id="POt-HQ-jzK"/>
+                                            <constraint firstAttribute="height" constant="671" id="QNJ-3G-chv"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -283,7 +284,7 @@
             </objects>
             <point key="canvasLocation" x="1189.5" y="1156.5"/>
         </scene>
-        <!--Lost Pals-->
+        <!--Map View Controller-->
         <scene sceneID="qhi-5s-c8Q">
             <objects>
                 <viewController storyboardIdentifier="mapVC" id="hq3-do-i2k" customClass="MapViewController" customModule="PawPals" customModuleProvider="target" sceneMemberID="viewController">
@@ -295,18 +296,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-t4-DgO">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-t4-DgO">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz3-1S-D48">
-                                <rect key="frame" x="140" y="58" width="83" height="50"/>
+                                <rect key="frame" x="146" y="79" width="83" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="My Profile">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="2V2-dX-iiW" kind="show" id="mAV-pk-iab"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -318,7 +316,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lost Pals" id="VZA-gL-bgW"/>
+                    <navigationItem key="navigationItem" id="VZA-gL-bgW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="RK0-ef-2fW"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myMapView" destination="r2C-t4-DgO" id="qVA-cS-pP8"/>
@@ -393,17 +393,17 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="ZS0-5m-a9t">
-                                <rect key="frame" x="89" y="442" width="209" height="189"/>
+                                <rect key="frame" x="90" y="412" width="209" height="189"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-R4-0Z0">
-                                <rect key="frame" x="238" y="75" width="105" height="30"/>
+                                <rect key="frame" x="238" y="77" width="105" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="profilesubmitButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="S5L-JQ-moq"/>
-                                    <segue destination="2V2-dX-iiW" kind="show" id="nYX-Xj-1Te"/>
+                                    <segue destination="2V2-dX-iiW" kind="show" id="8R0-vF-hic"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -434,20 +434,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watkinsville, GA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e26-TB-dI7">
-                                <rect key="frame" x="162" y="215" width="123" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watkinsville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e26-TB-dI7">
+                                <rect key="frame" x="162" y="215" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-lh-HTg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-lh-HTg">
                                 <rect key="frame" x="162" y="164" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English Bulldog" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-70-bgg">
-                                <rect key="frame" x="162" y="180" width="119" height="38"/>
+                                <rect key="frame" x="162" y="183" width="119" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -455,12 +455,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnglishBulldog" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-Zu-o22">
                                 <rect key="frame" x="42" y="141" width="106" height="102"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-Hf-tdK">
-                                <rect key="frame" x="162" y="136" width="64" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T31-0d-4wV">
                                 <rect key="frame" x="114" y="382" width="95" height="52"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -476,12 +470,9 @@
                                 <rect key="frame" x="42" y="377" width="64" height="62"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="PALS"/>
-                                <connections>
-                                    <segue destination="4c0-f7-yzj" kind="show" id="bkN-A0-En8"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-62-8o3">
-                                <rect key="frame" x="55" y="258" width="244" height="96"/>
+                                <rect key="frame" x="53" y="251" width="244" height="96"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Dudley is very sweet, but can be very feisty if he is hungry. We take him to the Georgia games and he loves the UGA fight song. If you hum the song, he will lick you.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -492,14 +483,35 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="AddPet"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-1U-9TH">
+                                <rect key="frame" x="261" y="215" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-Hf-tdK">
+                                <rect key="frame" x="162" y="135" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="petageLabel" destination="ODy-lh-HTg" id="Si6-Kb-BBl"/>
+                        <outlet property="petbreedLabel" destination="CwT-70-bgg" id="vsQ-ZV-gEh"/>
+                        <outlet property="petcityLabel" destination="e26-TB-dI7" id="If9-CQ-Vd6"/>
+                        <outlet property="petdescriptionText" destination="OZb-62-8o3" id="Dq2-79-c2m"/>
+                        <outlet property="petnameLabel" destination="eiM-Hf-tdK" id="mg7-kk-avn"/>
+                        <outlet property="petpicImage" destination="2WX-Zu-o22" id="BXz-oQ-Q0V"/>
+                        <outlet property="petstateLabel" destination="wpw-1U-9TH" id="zUW-9f-7Mh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ty4-cd-bSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826.5" y="340.5"/>
+            <point key="canvasLocation" x="1829.5" y="340.5"/>
         </scene>
         <!--LostPet-->
         <scene sceneID="eAW-jQ-M25">
@@ -536,6 +548,7 @@
                                 </state>
                                 <connections>
                                     <action selector="currentLocButton:" destination="6sO-bA-Tbx" eventType="touchUpInside" id="i6b-mg-Kxa"/>
+                                    <segue destination="hRe-Cq-MUO" kind="show" id="qXr-hC-6Gn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-T8-EHh">
@@ -546,6 +559,7 @@
                                 </state>
                                 <connections>
                                     <action selector="homeLocButton:" destination="6sO-bA-Tbx" eventType="touchUpInside" id="udt-9h-LSi"/>
+                                    <segue destination="hRe-Cq-MUO" kind="show" id="K4C-bK-rYV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lost Pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYV-D7-nRQ">
@@ -554,27 +568,28 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose address where pet was lost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-c9-vSE">
-                                <rect key="frame" x="48" y="57" width="429" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9b3-rO-FCC">
-                                <rect key="frame" x="193" y="206" width="76" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a68-4X-6eL">
-                                <rect key="frame" x="125" y="293" width="112" height="47"/>
+                                <rect key="frame" x="125" y="291" width="112" height="47"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="lostLoc:" destination="6sO-bA-Tbx" eventType="touchUpInside" id="7bQ-Nz-vkx"/>
+                                    <segue destination="hRe-Cq-MUO" kind="show" id="FRt-jL-pn0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9b3-rO-FCC">
+                                <rect key="frame" x="193" y="206" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose address where pet was lost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-c9-vSE">
+                                <rect key="frame" x="20" y="57" width="429" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -800,7 +815,6 @@
         <image name="pawdog" width="238" height="211"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nYX-Xj-1Te"/>
-        <segue reference="bkN-A0-En8"/>
+        <segue reference="qXr-hC-6Gn"/>
     </inferredMetricsTieBreakers>
 </document>
