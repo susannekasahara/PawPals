@@ -33,12 +33,26 @@ class RailsRequest: NSObject {
         
         
     }
+    //on lostPetVC home location
+    var latitude: Double {
+        
+        get { return _d.doubleForKey("latitude") }
+        set { _d.setDouble(newValue, forKey: "latitude") }
+        
+    }
+    
+    var longitude: Double {
+        
+        get { return _d.doubleForKey("longitude") }
+        set { _d.setDouble(newValue, forKey: "longitude") }
+        
+    }
     
     
     
     
     
-    // location
+    // RR
     
     private let base = "https://pawpals.herokuapp.com/"
     
@@ -106,6 +120,10 @@ class RailsRequest: NSObject {
                     success(true)
                     print(self.token)
                     
+            
+                    
+                    // set lat and lon
+                    
                     //request address
                     RailsRequest.session().addressWithUsername(streetaddress, city: city, state: state, zipcode: zipcode, success: { (success) -> () in
                         
@@ -123,7 +141,7 @@ class RailsRequest: NSObject {
         }
         
     }
-    //setup address
+    //setup user address
     func addressWithUsername(streetaddress: String, city: String, state: String, zipcode: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
@@ -172,12 +190,12 @@ class RailsRequest: NSObject {
         }
         
     }
-    
-    func locationManager(latitude: Double, longitude: Double, success: (Bool) -> ()) {
+    //LOCATION OF LOST PET CURRENT, HOME, NEW ADDRESS
+    func postLocation(latitude: Double, longitude: Double, success: (Bool) -> ()) {
         
         var info = RequestInfo()
         
-        info.endpoint = "/pet_notices/:pet_id"
+        info.endpoint = "/pet_notices/6"
         info.method = .POST
         info.parameters = [
             
@@ -197,16 +215,6 @@ class RailsRequest: NSObject {
         
     }
 
-        
-        
-    
-    //POST LOST PET @ NEW LOC
-    
-
-    //POST LOST PET CURRENT LOC
-    
-    
-    //POST LOST PET HOME LOC
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
@@ -258,25 +266,28 @@ class RailsRequest: NSObject {
             // creates a task from request - based on network connectivity
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
                 
-                
-                
-                // work with data returned
-                
-                if let data = data {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     
-                    // have data
+                    // work with data returned
                     
-                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                    if let data = data {
                         
-                        completion(returnedInfo: returnedInfo)
+                        // have data
+                        if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                            
+                            completion(returnedInfo: returnedInfo)
+                            
+                        }
                         
+                    } else {
+                        
+                        // no data: check for error and return alert from
                     }
                     
-                } else {
-                    
-                    // no data: check for error and return alert from
-                }
+                })
+                
             }
+            
             task.resume()
             
         }

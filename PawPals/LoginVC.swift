@@ -24,9 +24,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             if didLogin {
                 
 
-//                let VC = self.storyboard?.instantiateViewControllerWithIdentifier("VC") as? MapViewController
-//                    self.navigationController?.pushViewController(VC!, animated: true)
-//                
+                let VC = self.storyboard?.instantiateViewControllerWithIdentifier("mapVC") as? MapViewController
+                
+                self.navigationController?.pushViewController(VC!, animated: true)
+//
                 
             } else {
                 

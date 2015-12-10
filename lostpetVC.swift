@@ -12,6 +12,8 @@ import MapKit
 
 class lostpetVC: UIViewController, CLLocationManagerDelegate {
     
+    var geocoder: CLGeocoder!
+    
     let lManager = CLLocationManager()
 
     @IBAction func currentLocButton(sender: AnyObject) {
@@ -31,7 +33,7 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
             
             print(location)
             
-            RailsRequest.session().locationManager(location.coordinate.latitude, longitude: location.coordinate.longitude, success: { didLogin in
+            RailsRequest.session().postLocation(location.coordinate.latitude, longitude: location.coordinate.longitude, success: { didLogin in
                 
                 // did send location
                 
@@ -40,7 +42,21 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        
+        print(error)
+    }
+    
+    @IBOutlet weak var homeLocButton: UIButton! 
+    
     @IBAction func homeLocButton(sender: AnyObject) {
+        
+        RailsRequest.session().postLocation(RailsRequest.session().latitude, longitude: RailsRequest.session().longitude, success: { didLogin in
+            
+            // did send location
+            
+        })
+        
         
         // get lat and long from railsrequest singleton
         
@@ -57,32 +73,48 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var zipLost: UITextField!
     
-    @IBAction func lostLocButton(sender: AnyObject) {
     
-        // run clgeocoder
+    @IBOutlet weak var lostLocButton: UIButton!
+    
+    @IBAction func lostLoc(sender: AnyObject) {
         
         
+    
+    
+        NSLog("Lost Loc")
         
+        self.geocoder = CLGeocoder()
+        
+        let address: String = "\(self.streetAddressLost.text!) \(self.cityLost.text!) \(self.stateLost.text!) \(self.zipLost.text!)"
+        
+        self.lostLocButton.enabled = false
+        
+        self.geocoder.geocodeAddressString(address) { (placemarks, error) -> Void in
+            
+            if placemarks!.count > 0 {
+                var placemark: CLPlacemark = placemarks![0]
+                var location: CLLocation = placemark.location!
+                var coordinate: CLLocationCoordinate2D = location.coordinate
+                            }
+        }
+        self.lostLocButton.enabled = true
         
         
     }
-    
-        //broadcasr lost dog at new location
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
 }
+
+
+
+    
+
+        
+    
+    
+
+
+
+
+
+    
+
 
