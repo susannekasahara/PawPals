@@ -45,19 +45,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        for location in locations {
+        guard let location = locations.first else { return }
+        
+        print(location.coordinate.latitude, location.coordinate.longitude)
+        
+        // request lost pets around location
             
-            print(location.coordinate.latitude, location.coordinate.longitude)
-            
-            let annotation = MKPointAnnotation() //need MKAnnotationView
-            
-            annotation.coordinate = location.coordinate
-            
-            annotation.title = "This is Cool"
-            annotation.subtitle = "and fun"
-            
-            myMapView.addAnnotation(annotation)
-        }
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {

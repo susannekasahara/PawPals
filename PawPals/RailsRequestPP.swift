@@ -186,6 +186,22 @@ class RailsRequest: NSObject {
             
             print(returnedInfo)
             
+            // dive into "pet"
+            
+            if let pet = returnedInfo?["pet"] as? [String:AnyObject] {
+                
+                if let key = pet["pet_id"] as? String {
+                    
+                    self.petID = key
+                    success(true)
+                    print(self.token)
+            
+            // use "pet_id" to set "petID"
+                    
+                }
+                
+            }
+            
             
         }
         
@@ -193,13 +209,15 @@ class RailsRequest: NSObject {
     //LOCATION OF LOST PET CURRENT, HOME, NEW ADDRESS
     func postLocation(latitude: Double, longitude: Double, success: (Bool) -> ()) {
         
+        guard let petID = petID else { return success(false) }
+        
         var info = RequestInfo()
         
-        info.endpoint = "/pet_notices/6"
+        info.endpoint = "/pet_notices/" + petID
         info.method = .POST
         info.parameters = [
             
-            "pet_id" : "6",
+            "pet_id" : petID,
             "longitude" : "\(longitude)",
             "latitude" : "\(latitude)"
             
@@ -209,7 +227,7 @@ class RailsRequest: NSObject {
         requestWithInfo(info) { (returnedInfo) -> () in
             
             print(returnedInfo)
-            
+            success(true)
             
         }
         

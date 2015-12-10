@@ -386,16 +386,6 @@
                                     <action selector="galleryphotoButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="m5Q-sM-uXx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-R4-0Z0">
-                                <rect key="frame" x="238" y="77" width="105" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="SUBMIT">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="profilesubmitButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="S5L-JQ-moq"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tell us about your pet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-T9-ISP">
                                 <rect key="frame" x="127" y="242" width="216" height="101"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,6 +395,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="ZS0-5m-a9t">
                                 <rect key="frame" x="89" y="442" width="209" height="189"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-R4-0Z0">
+                                <rect key="frame" x="238" y="75" width="105" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="profilesubmitButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="S5L-JQ-moq"/>
+                                    <segue destination="2V2-dX-iiW" kind="show" id="nYX-Xj-1Te"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -498,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ty4-cd-bSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.5" y="340.5"/>
+            <point key="canvasLocation" x="1826.5" y="340.5"/>
         </scene>
         <!--LostPet-->
         <scene sceneID="eAW-jQ-M25">
@@ -714,7 +715,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fWd-28-Ejq">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fWd-28-Ejq" id="fMc-lq-i4f">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -722,7 +723,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="178" id="zsa-Sg-PhH">
-                                <rect key="frame" x="0.0" y="72" width="375" height="178"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="178"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zsa-Sg-PhH" id="NPh-fk-YGH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
@@ -799,6 +800,7 @@
         <image name="pawdog" width="238" height="211"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="nYX-Xj-1Te"/>
         <segue reference="bkN-A0-En8"/>
     </inferredMetricsTieBreakers>
 </document>
