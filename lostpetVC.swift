@@ -25,20 +25,8 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
         lManager.requestWhenInUseAuthorization()
         
         lManager.requestLocation()
-        guard let loc = lManager.location else { return }
         
-        RailsRequest.session().postLocation(loc.coordinate.latitude, longitude: loc.coordinate.longitude, present: true, success: { success in
-            
-            // did send location
-            if success {
-                print("success lost")
-                
-            } else {
-                print("fail lost")
-            }
-          
-        })
-
+        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -47,6 +35,34 @@ class lostpetVC: UIViewController, CLLocationManagerDelegate {
         if let location = locations.first {
             
             print(location)
+            
+            RailsRequest.session().postLocation(location.coordinate.latitude, longitude: location.coordinate.longitude, success: { success in
+                
+                // did send location
+                if success {
+                    print("success update location")
+                    
+                    RailsRequest.session().lostsLocUpdate(false, success: { (success) -> () in
+                        
+                        if success {
+                            
+                            print("success lost")
+                            
+                        } else {
+                            
+                            print("success fail")
+                            
+                            
+                        }
+                        
+                    })
+                    
+                } else {
+                    print("fail update location")
+                }
+                
+            })
+
             
             
             

@@ -190,9 +190,9 @@ class RailsRequest: NSObject {
             
             if let pet = returnedInfo?["pet"] as? [String:AnyObject] {
                 
-                if let key = pet["pet_id"] as? String {
+                if let key = pet["pet_id"] as? Int {
                     
-                    self.petID = key
+                    self.petID = "\(key)"
                     success(true)
                     print(self.petID)
                     
@@ -207,7 +207,7 @@ class RailsRequest: NSObject {
         
     }
     //LOCATION OF LOST PET CURRENT, HOME, NEW ADDRESS
-    func postLocation(latitude: Double, longitude: Double, present: Bool = true, success: (Bool) -> ()) {
+    func postLocation(latitude: Double, longitude: Double,  success: (Bool) -> ()) {
         
         guard let petID = petID else { return success(false) }
         
@@ -218,7 +218,6 @@ class RailsRequest: NSObject {
         info.parameters = [
             
             "pet_id" : petID,
-            "present" : present,
             "longitude" : "\(longitude)",
             "latitude" : "\(latitude)"
             
@@ -228,11 +227,35 @@ class RailsRequest: NSObject {
         requestWithInfo(info) { (returnedInfo) -> () in
             
             print(returnedInfo)
-            //            success(true)
+            success(true)
             
         }
         
     }
+    
+    func lostsLocUpdate(present: Bool = true, success: (Bool) -> ()) {
+        
+        guard let petID = petID else { return success(false) }
+
+        var info = RequestInfo()
+        
+        info.endpoint = "pets/" + petID
+        info.method = .PUT
+        info.parameters = [
+            
+            "present" : present ? "yes" : "no",
+                                // 1 : 0 
+        ]
+        
+        requestWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
+            success(true)
+            
+        }
+        
+    }
+
     
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
@@ -269,11 +292,15 @@ class RailsRequest: NSObject {
             
             if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
                 
+                print(requestData)
+                
                 if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+                    
+                    print(jsonString)
                     
                     request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
                     
-                    let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                    let postData = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
                     
                     request.HTTPBody = postData
                     
@@ -330,7 +357,7 @@ struct RequestInfo {
     
     enum MethodType: String {
         
-        case POST, GET, DELETE
+        case POST, GET, DELETE, PUT
     }
     
     var endpoint: String!

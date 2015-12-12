@@ -9,6 +9,8 @@
 import UIKit
 
 class lostprofileVC: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

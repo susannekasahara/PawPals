@@ -9,7 +9,7 @@
 import UIKit
 
 class RegisterVC: UIViewController {
-
+    
     @IBOutlet weak var emailRegField: UITextField!
     
     @IBOutlet weak var passwordRegField: UITextField!
@@ -20,29 +20,30 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var streetaddressField: UITextField!
     
     @IBOutlet weak var cityField: UITextField!
-
+    
     @IBAction func nextButton(sender: AnyObject) {
-    
-    
-    
-    guard let email = emailRegField.text,let password = passwordRegField.text, let zipcode = zipcodeRegField.text, let streetaddress = streetaddressField.text, let city = cityField.text, let state = stateField.text else { return }
         
-    
+        
+        
+        guard let email = emailRegField.text,let password = passwordRegField.text, let zipcode = zipcodeRegField.text, let streetaddress = streetaddressField.text, let city = cityField.text, let state = stateField.text else { return }
+        
+        
         RailsRequest.session().registerWithUsername(email, andPassword: password, streetaddress: streetaddress, city: city, state: state, zipcode: zipcode, success:  {
             didRegister in
             
             if didRegister {
-    
-       
-   } else {
-    
+                
+                
+            } else {
+                
+                
+            }
+            
+        })
         
-}
-
-})
-}
-
-
+    }
+    
+    
 }
 
 

@@ -77,15 +77,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    func showDetail(button: UIButton) {
-        
-        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("DetailVC") {
-            
-            viewController.view.backgroundColor = UIColor.lightGrayColor()
-            
-            navigationController?.pushViewController(viewController, animated: true)
-        }
-}
+//    func showDetail(button: UIButton) {
+//        
+//        if let viewController = storyboard?.instantiateViewControllerWithIdentifier("DetailVC") {
+//            
+//            viewController.view.backgroundColor = UIColor.lightGrayColor()
+//            
+//            navigationController?.pushViewController(viewController, animated: true)
+//        }
+//}
 
 
 }

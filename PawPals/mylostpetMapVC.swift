@@ -6,6 +6,8 @@
 //  Copyright © 2015 Susanne Kasahara. All rights reserved.
 //
 
+// to do: ADD MKANNOTATION to show pin
+
 import UIKit
 import MapKit
 
