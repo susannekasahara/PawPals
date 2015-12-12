@@ -11,6 +11,36 @@ import UIKit
 class lostprofileVC: UIViewController {
     
     
+    @IBAction func wheresMyPetButton(sender: AnyObject) {
+        
+        func myPetLoc(latitude: Double, longitude: Double,  success: (Bool) -> ()) {
+            
+            guard let myPetID = myPetID else { return success(false) }
+            
+            var info = RequestInfo()
+            
+            info.endpoint = "pet_checkins/" + petID
+            info.method = .POST
+            info.parameters = [
+                
+                "pet_id" : myPetID,
+                "longitude" : "\(longitude)",
+                "latitude" : "\(latitude)"
+                
+                
+            ]
+            
+            requestWithInfo(info) { (returnedInfo) -> () in
+                
+                print(returnedInfo)
+                success(true)
+                
+            }
+            
+        }
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
