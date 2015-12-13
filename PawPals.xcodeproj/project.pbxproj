@@ -49,7 +49,7 @@
 		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = pplogin.playground; path = PawPals/pplogin.playground; sourceTree = "<group>"; };
 		82BCA8F01C0F615A00B88330 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		82C914F21C175FE2001DA723 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		82C914F41C196BEE001DA723 /* wheresMyPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wheresMyPet.swift; sourceTree = "<group>"; };
+		82C914F41C196BEE001DA723 /* wheresMyPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = wheresMyPet.swift; path = ../wheresMyPet.swift; sourceTree = "<group>"; };
 		82D9B65F1C0FA4E400A32B2B /* keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 		82D9B68A1C120EDD00A32B2B /* palsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = palsTVC.swift; sourceTree = "<group>"; };
 		82D9B68C1C1214EF00A32B2B /* lostpetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = lostpetVC.swift; path = ../lostpetVC.swift; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 		82728A201C0B40C300430839 = {
 			isa = PBXGroup;
 			children = (
-				82C914F41C196BEE001DA723 /* wheresMyPet.swift */,
 				82C914F21C175FE2001DA723 /* CoreLocation.framework */,
 				82D9B65F1C0FA4E400A32B2B /* keys.swift */,
 				82728A2B1C0B40C300430839 /* PawPals */,
@@ -101,6 +100,7 @@
 				82975D541C13311A00728563 /* lostprofileVC.swift */,
 				82728A471C0B7E2300430839 /* PetPhotoTVC.swift */,
 				82975D571C13412C00728563 /* mylostpetMapVC.swift */,
+				82C914F41C196BEE001DA723 /* wheresMyPet.swift */,
 				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
 			);
 			path = PawPals;

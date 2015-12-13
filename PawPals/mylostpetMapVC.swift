@@ -10,29 +10,47 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class mylostpetMapVC: UIViewController {
-
+class mylostpetMapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    @IBOutlet weak var mylostpetMap: MKMapView!
+    
+    
+    var petID = Int()
+    var latitude = Float()
+    var longitude = Float()
+    
+    func getChipData(petID: Int, latitude: Float, longitude: Float) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        RailsRequest.session().chipData(latitude, longitude: longitude, success:  {
+            didLocate in
+            
+            if didLocate {
+                
+                let VC = self.storyboard?.instantiateViewControllerWithIdentifier("mymapVC") as? MapViewController
+                
+                self.navigationController?.pushViewController(VC!, animated: true)
+                //
+                
+            } else {
+                
+                // throw an alert error that login failed
+                
+            }
+            
+            
+        })
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+   

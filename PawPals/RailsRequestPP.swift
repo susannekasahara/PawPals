@@ -255,8 +255,32 @@ class RailsRequest: NSObject {
         }
         
     }
-
-    
+    //PULL CHIP DATA FOR CURRENT PET LOC
+    func chipData(latitude: Float, longitude: Float,  success: (Bool) -> ()) {
+        
+        guard let petID = petID else { return success(false) }
+        
+        var info = RequestInfo()
+        
+        info.endpoint = "pet_notices/" + petID
+        info.method = .GET
+        info.parameters = [
+            
+            "pet_id" : "\(petID)",
+            "longitude" : "\(longitude)",
+            "latitude" : "\(latitude)"
+            
+            
+        ]
+        
+        requestWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
+            success(true)
+            
+        }
+        
+    }
     
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         
