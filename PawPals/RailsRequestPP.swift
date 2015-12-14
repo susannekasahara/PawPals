@@ -196,7 +196,6 @@ class RailsRequest: NSObject {
                     success(true)
                     print(self.petID)
                     
-                    // use "pet_id" to set "petID"
                     
                 }
                 

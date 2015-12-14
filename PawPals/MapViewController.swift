@@ -32,9 +32,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         lManager.delegate = self
         
-        //show pretty blue dot
+        myMapView.annotations
         
-        myMapView.showsUserLocation = true
+        //or
+        
+        //myMapView.showsUserLocation
         
         lManager.startUpdatingLocation()
         
