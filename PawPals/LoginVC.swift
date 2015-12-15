@@ -14,6 +14,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordLoginField: UITextField!
     
+    override func viewDidLoad() {
+        
+        print(RailsRequest.session().token)
+    }
+    
     @IBAction func loginButton(sender: AnyObject) {
         
         guard let email = emailLoginField.text, let password = passwordLoginField.text else { return }

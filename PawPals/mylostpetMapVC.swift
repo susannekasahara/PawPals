@@ -10,109 +10,97 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
-class mylostpetMapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class mylostpetMapVC: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mylostpetMap: MKMapView!
     
-    var petID = Int()
-    var latitude = Float()
-    var longitude = Float()
+    var petID: Int = 0
+    var latitude: Double = 0
+    var longitude: Double = 0
     
-    let lpManager = CLLocationManager()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mylostpetMap.delegate = self
         
-        lpManager.requestAlwaysAuthorization()
-        lpManager.delegate = self
         
-        mylostpetMap.showsUserLocation = false
-        
-        
-        lpManager.startUpdatingLocation()
-        
-        lpManager.requestLocation()
-        
-    }
-    
-    
-    
-    
-    
-        func getChipData(petID: Int, latitude: Float, longitude: Float) {
+        RailsRequest.session().chipData { (petLocation) -> () in
             
+            //use venue info to create annotation
+            
+            print("chip data finished")
+            
+            if let locationInfo = petLocation?["pet_check_ins"] as? [[String:AnyObject]] {
+                
+                print("has chip info")
+                
+                // create an annotation with the lat and lon returned
+                
+                if let last = locationInfo.last {
+                    
+                    print(locationInfo)
+                    print(last)
+                    
+                    let lat = last["latitude"] as? Double ?? 0
+                    let lng = last["longitude"] as? Double ?? 0
+                    let coord = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = coord
+                    self.mylostpetMap.addAnnotation(annotation)
 
-        
-        RailsRequest.session().chipData(latitude, longitude: longitude, success:  {
-            didLocate in
-            
-            if didLocate {
-                
-                let VC = self.storyboard?.instantiateViewControllerWithIdentifier("mymapVC") as? MapViewController
-                
-                self.navigationController?.pushViewController(VC!, animated: true)
-               
-                
-            } else {
-                
-            
+                    
+                    
+                    print("locationInfo \(locationInfo)")
+                    
+                }
                 
             }
             
-            
-        })
+        }
+        
         
     }
     
-    
-    
-
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
-        func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            
-            guard let location = locations.first else { return }
-            
-            print(location.coordinate.latitude, location.coordinate.longitude)
-            
-            // request lost pets around location
-            
-        }
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
         
-        func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-            
-            print(error)
-        }
+        //annotationView.pinColor = .Purple
+        annotationView.pinTintColor = UIColor(red:1, green:0.38, blue:0.33, alpha:1)
         
-        func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-            
-            let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
-            
-            //annotationView.pinColor = .Purple
-            annotationView.pinTintColor = UIColor(red:1, green:0.38, blue:0.33, alpha:1)
-            
-            annotationView.canShowCallout = true
-            
-            let button = UIButton(type: .DetailDisclosure)
-            
-            button.addTarget(self, action: "showDetail:", forControlEvents: .TouchUpInside)
-            
-            annotationView.rightCalloutAccessoryView = button
-            
-            return annotationView
-            
-        }
+        annotationView.canShowCallout = true
         
-    
+        let button = UIButton(type: .DetailDisclosure)
+        
+        button.addTarget(self, action: "showDetail:", forControlEvents: .TouchUpInside)
+        
+        annotationView.rightCalloutAccessoryView = button
+        
+        return annotationView
+        
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLoction: CLLocation = locations[0]
+        let latitude = userLoction.coordinate.latitude
+        let longitude = userLoction.coordinate.longitude
+        let latDelta: CLLocationDegrees = 0.05
+        let lonDelta: CLLocationDegrees = 0.05
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        self.mylostpetMap.setRegion(region, animated: true)
+        self.mylostpetMap.showsUserLocation = true
+    }
+}
 
-    
-    
-    
-    
+
+
+
 
 
 

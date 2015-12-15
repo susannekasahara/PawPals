@@ -10,7 +10,8 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
-    //var pet: [String: AnyObject] = [:]
+    var petInfo: [String:AnyObject]!
+
     
     @IBOutlet weak var petpicImage: UIImageView!
 

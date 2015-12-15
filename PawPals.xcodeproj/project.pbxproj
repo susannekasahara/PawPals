@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8217896B1C2097B7004B6DD6 /* petCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8217896A1C2097B7004B6DD6 /* petCell.swift */; };
+		821789741C20B778004B6DD6 /* AFAmazonS3Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217896F1C20B778004B6DD6 /* AFAmazonS3Manager.m */; };
+		821789751C20B778004B6DD6 /* AFAmazonS3RequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789711C20B778004B6DD6 /* AFAmazonS3RequestSerializer.m */; };
+		821789761C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789731C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.m */; };
+		8217898A1C20B7A5004B6DD6 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789781C20B7A4004B6DD6 /* AFHTTPRequestOperation.m */; };
+		8217898B1C20B7A5004B6DD6 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217897A1C20B7A4004B6DD6 /* AFHTTPRequestOperationManager.m */; };
+		8217898C1C20B7A5004B6DD6 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217897C1C20B7A4004B6DD6 /* AFHTTPSessionManager.m */; };
+		8217898D1C20B7A5004B6DD6 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8217897F1C20B7A4004B6DD6 /* AFNetworkReachabilityManager.m */; };
+		8217898E1C20B7A5004B6DD6 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789811C20B7A4004B6DD6 /* AFSecurityPolicy.m */; };
+		8217898F1C20B7A5004B6DD6 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789831C20B7A4004B6DD6 /* AFURLConnectionOperation.m */; };
+		821789901C20B7A5004B6DD6 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789851C20B7A4004B6DD6 /* AFURLRequestSerialization.m */; };
+		821789911C20B7A5004B6DD6 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789871C20B7A4004B6DD6 /* AFURLResponseSerialization.m */; };
+		821789921C20B7A5004B6DD6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */; };
 		826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826ADB031C0CECDD0020B974 /* MyPetVC.swift */; };
 		82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2C1C0B40C300430839 /* AppDelegate.swift */; };
 		82728A321C0B40C300430839 /* PPUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82728A301C0B40C300430839 /* PPUser.storyboard */; };
@@ -30,6 +43,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8217896A1C2097B7004B6DD6 /* petCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petCell.swift; sourceTree = "<group>"; };
+		8217896D1C20B777004B6DD6 /* PawPals-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PawPals-Bridging-Header.h"; sourceTree = "<group>"; };
+		8217896E1C20B778004B6DD6 /* AFAmazonS3Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3Manager.h; sourceTree = "<group>"; };
+		8217896F1C20B778004B6DD6 /* AFAmazonS3Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3Manager.m; sourceTree = "<group>"; };
+		821789701C20B778004B6DD6 /* AFAmazonS3RequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3RequestSerializer.h; sourceTree = "<group>"; };
+		821789711C20B778004B6DD6 /* AFAmazonS3RequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3RequestSerializer.m; sourceTree = "<group>"; };
+		821789721C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3ResponseSerializer.h; sourceTree = "<group>"; };
+		821789731C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3ResponseSerializer.m; sourceTree = "<group>"; };
+		821789771C20B7A4004B6DD6 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		821789781C20B7A4004B6DD6 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		821789791C20B7A4004B6DD6 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8217897A1C20B7A4004B6DD6 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8217897B1C20B7A4004B6DD6 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		8217897C1C20B7A4004B6DD6 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		8217897D1C20B7A4004B6DD6 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		8217897E1C20B7A4004B6DD6 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8217897F1C20B7A4004B6DD6 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		821789801C20B7A4004B6DD6 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		821789811C20B7A4004B6DD6 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		821789821C20B7A4004B6DD6 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		821789831C20B7A4004B6DD6 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		821789841C20B7A4004B6DD6 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		821789851C20B7A4004B6DD6 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		821789861C20B7A4004B6DD6 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		821789871C20B7A4004B6DD6 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		821789881C20B7A4004B6DD6 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		826ADB031C0CECDD0020B974 /* MyPetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetVC.swift; sourceTree = "<group>"; };
 		82728A291C0B40C300430839 /* PawPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82728A2C1C0B40C300430839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PawPals/AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +142,7 @@
 				82975D571C13412C00728563 /* mylostpetMapVC.swift */,
 				82C914F41C196BEE001DA723 /* wheresMyPet.swift */,
 				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
+				8217896A1C2097B7004B6DD6 /* petCell.swift */,
 			);
 			path = PawPals;
 			sourceTree = "<group>";
@@ -109,6 +150,31 @@
 		82975D561C133DD700728563 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				8217896E1C20B778004B6DD6 /* AFAmazonS3Manager.h */,
+				8217896F1C20B778004B6DD6 /* AFAmazonS3Manager.m */,
+				821789701C20B778004B6DD6 /* AFAmazonS3RequestSerializer.h */,
+				821789711C20B778004B6DD6 /* AFAmazonS3RequestSerializer.m */,
+				821789721C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.h */,
+				821789731C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.m */,
+				821789771C20B7A4004B6DD6 /* AFHTTPRequestOperation.h */,
+				821789781C20B7A4004B6DD6 /* AFHTTPRequestOperation.m */,
+				821789791C20B7A4004B6DD6 /* AFHTTPRequestOperationManager.h */,
+				8217897A1C20B7A4004B6DD6 /* AFHTTPRequestOperationManager.m */,
+				8217897B1C20B7A4004B6DD6 /* AFHTTPSessionManager.h */,
+				8217897C1C20B7A4004B6DD6 /* AFHTTPSessionManager.m */,
+				8217897D1C20B7A4004B6DD6 /* AFNetworking.h */,
+				8217897E1C20B7A4004B6DD6 /* AFNetworkReachabilityManager.h */,
+				8217897F1C20B7A4004B6DD6 /* AFNetworkReachabilityManager.m */,
+				821789801C20B7A4004B6DD6 /* AFSecurityPolicy.h */,
+				821789811C20B7A4004B6DD6 /* AFSecurityPolicy.m */,
+				821789821C20B7A4004B6DD6 /* AFURLConnectionOperation.h */,
+				821789831C20B7A4004B6DD6 /* AFURLConnectionOperation.m */,
+				821789841C20B7A4004B6DD6 /* AFURLRequestSerialization.h */,
+				821789851C20B7A4004B6DD6 /* AFURLRequestSerialization.m */,
+				821789861C20B7A4004B6DD6 /* AFURLResponseSerialization.h */,
+				821789871C20B7A4004B6DD6 /* AFURLResponseSerialization.m */,
+				821789881C20B7A4004B6DD6 /* AFURLSessionManager.h */,
+				821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */,
 				82728A301C0B40C300430839 /* PPUser.storyboard */,
 				82728A2C1C0B40C300430839 /* AppDelegate.swift */,
 				82728A361C0B40C300430839 /* Assets.xcassets */,
@@ -116,6 +182,7 @@
 				82728A3B1C0B40C300430839 /* Info.plist */,
 				82728A331C0B40C300430839 /* PawPals.xcdatamodeld */,
 				82BCA8EF1C0E0D4200B88330 /* pplogin.playground */,
+				8217896D1C20B777004B6DD6 /* PawPals-Bridging-Header.h */,
 			);
 			name = Files;
 			sourceTree = "<group>";
@@ -193,18 +260,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				82728A351C0B40C300430839 /* PawPals.xcdatamodeld in Sources */,
+				8217896B1C2097B7004B6DD6 /* petCell.swift in Sources */,
 				82D9B68B1C120EDD00A32B2B /* palsTVC.swift in Sources */,
 				82728A481C0B7E2300430839 /* PetPhotoTVC.swift in Sources */,
+				8217898F1C20B7A5004B6DD6 /* AFURLConnectionOperation.m in Sources */,
+				8217898E1C20B7A5004B6DD6 /* AFSecurityPolicy.m in Sources */,
+				821789751C20B778004B6DD6 /* AFAmazonS3RequestSerializer.m in Sources */,
+				8217898C1C20B7A5004B6DD6 /* AFHTTPSessionManager.m in Sources */,
 				82728A4C1C0B82EA00430839 /* ProfileVC.swift in Sources */,
 				82975D551C13311A00728563 /* lostprofileVC.swift in Sources */,
 				82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */,
 				82D9B68D1C1214EF00A32B2B /* lostpetVC.swift in Sources */,
+				821789741C20B778004B6DD6 /* AFAmazonS3Manager.m in Sources */,
 				82728A4E1C0BBF2600430839 /* RailsRequestPP.swift in Sources */,
+				8217898B1C20B7A5004B6DD6 /* AFHTTPRequestOperationManager.m in Sources */,
 				82728A421C0B419400430839 /* LoginVC.swift in Sources */,
+				8217898A1C20B7A5004B6DD6 /* AFHTTPRequestOperation.m in Sources */,
+				821789921C20B7A5004B6DD6 /* AFURLSessionManager.m in Sources */,
 				82975D581C13412C00728563 /* mylostpetMapVC.swift in Sources */,
+				8217898D1C20B7A5004B6DD6 /* AFNetworkReachabilityManager.m in Sources */,
+				821789911C20B7A5004B6DD6 /* AFURLResponseSerialization.m in Sources */,
+				821789901C20B7A5004B6DD6 /* AFURLRequestSerialization.m in Sources */,
 				826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */,
 				82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */,
 				82C914F51C196BEE001DA723 /* wheresMyPet.swift in Sources */,
+				821789761C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.m in Sources */,
 				82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */,
 				82728A441C0B41BA00430839 /* RegisterVC.swift in Sources */,
 			);
@@ -319,10 +399,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PawPals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.PawPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PawPals-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -330,10 +413,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PawPals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.PawPals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PawPals-Bridging-Header.h";
 			};
 			name = Release;
 		};
