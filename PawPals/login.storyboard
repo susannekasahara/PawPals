@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--LoginVC-->
@@ -21,32 +20,12 @@
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-A8-agW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cis-54-XCI">
-                                        <rect key="frame" x="32" y="532" width="311" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="J9g-Al-YAi"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THA-oH-eYP">
-                                        <rect key="frame" x="8" y="595" width="175" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="E6L-NZ-fR5"/>
-                                            <constraint firstAttribute="width" constant="175" id="qUj-5C-qhY"/>
-                                        </constraints>
-                                        <state key="normal" image="Screen Shot 2015-12-15 at 10.59.00 AM">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginButton:" destination="oqW-mO-H2n" eventType="touchUpInside" id="xx5-fy-P1y"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pawpals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-H4-bmM">
-                                        <rect key="frame" x="32" y="71" width="311" height="62"/>
+                                        <rect key="frame" x="20" y="61" width="335" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="Ioy-cG-FJz"/>
                                             <constraint firstAttribute="height" constant="62" id="J8r-gI-Y2H"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="SXp-xv-efe"/>
                                             <constraint firstAttribute="width" constant="142" id="vfm-pb-Ohb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="44"/>
@@ -60,114 +39,96 @@
                                         </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cvb-of-JSm">
-                                        <rect key="frame" x="32" y="474" width="311" height="50"/>
+                                        <rect key="frame" x="20" y="233" width="335" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KRP-9B-pjb"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="T39-YN-UPf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M4-ag-YFT">
-                                        <rect key="frame" x="191" y="595" width="176" height="64"/>
-                                        <state key="normal" image="Screen Shot 2015-12-15 at 10.59.22 AM">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cis-54-XCI">
+                                        <rect key="frame" x="20" y="291" width="335" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="J9g-Al-YAi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="RsG-3I-Fhl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M4-ag-YFT" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                        <rect key="frame" x="193" y="351" width="155" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="3nx-Ry-YEK"/>
+                                            <constraint firstAttribute="height" constant="60" id="dRo-5n-umT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="REGISTER">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="wN8-dZ-qDY" kind="show" id="1CU-RS-oB0"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2015-12-15 at 11.01.37 AM" translatesAutoresizingMaskIntoConstraints="NO" id="arN-01-4TE">
-                                        <rect key="frame" x="50" y="168" width="275" height="209"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THA-oH-eYP" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="351" width="158" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="158" id="3zK-wE-V9H"/>
+                                            <constraint firstAttribute="height" constant="60" id="5As-1X-D6M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButton:" destination="oqW-mO-H2n" eventType="touchUpInside" id="xx5-fy-P1y"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5PK-vJ-Qgp">
+                                        <rect key="frame" x="125" y="131" width="125" height="91"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="91" id="z3L-t0-XHF"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="top" secondItem="Cvb-of-JSm" secondAttribute="bottom" constant="24" id="0Fa-US-kec"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leadingMargin" id="2uZ-bI-sal"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="top" secondItem="Cvb-of-JSm" secondAttribute="bottom" constant="8" symbolic="YES" id="3nf-X1-WUA"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="top" secondItem="0M4-ag-YFT" secondAttribute="top" id="42H-Xf-jSI"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="57" id="4Mc-ka-qx7"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="centerX" secondItem="Cvb-of-JSm" secondAttribute="centerX" id="4gu-sp-OTe"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="93" id="6WG-wp-guO"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="32" id="7UC-Ym-Lso"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="centerX" secondItem="arN-01-4TE" secondAttribute="centerX" id="7VF-6g-Lxe"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="leading" secondItem="c4u-H4-bmM" secondAttribute="leading" id="7xf-hm-RGh"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="57" id="9Yg-4z-6WX"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="trailing" secondItem="c4u-H4-bmM" secondAttribute="trailing" id="A3H-is-GSV"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="125" id="Aw6-VU-xxs"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="top" secondItem="arN-01-4TE" secondAttribute="bottom" constant="97" id="D4Z-a6-h8D"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="leading" secondItem="THA-oH-eYP" secondAttribute="trailing" constant="8" symbolic="YES" id="Fb5-Dv-oLu"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="58" id="Fpy-Gg-z8H"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="centerX" secondItem="THA-oH-eYP" secondAttribute="centerX" id="LpE-3e-mFU"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="centerX" secondItem="0M4-ag-YFT" secondAttribute="centerX" id="LyA-gT-BVN"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="57" id="NO2-Zg-JT2"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="bottom" secondItem="THA-oH-eYP" secondAttribute="bottom" id="OLo-87-nHm"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="top" secondItem="cis-54-XCI" secondAttribute="bottom" constant="17" id="OSh-w6-ETF"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="358" id="OmF-Bc-L3g"/>
-                                    <constraint firstItem="arN-01-4TE" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="50" id="PNu-UO-2T4"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="57" id="RE8-GK-Pgs"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="trailing" secondItem="cis-54-XCI" secondAttribute="trailing" id="Skt-XN-ktR"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="trailing" secondItem="c4g-A8-agW" secondAttribute="trailingMargin" id="Sp4-zy-zzw"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="top" secondItem="THA-oH-eYP" secondAttribute="bottom" constant="8" id="Spd-Ty-J0l"/>
-                                    <constraint firstItem="arN-01-4TE" firstAttribute="centerX" secondItem="c4g-A8-agW" secondAttribute="centerX" id="U2B-bo-8Zv"/>
-                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="leading" secondItem="cis-54-XCI" secondAttribute="leading" id="Ulg-t2-dhi"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="93" id="Uov-A2-Lzl"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="trailing" secondItem="Cvb-of-JSm" secondAttribute="trailing" id="VZe-gf-wQW"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="57" id="Wf4-EC-1p3"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="top" secondItem="THA-oH-eYP" secondAttribute="bottom" constant="8" symbolic="YES" id="aO0-w4-tRp"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="centerX" secondItem="Cvb-of-JSm" secondAttribute="centerX" id="dEZ-e5-U3O"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="leading" secondItem="Cvb-of-JSm" secondAttribute="leading" id="dKd-ux-SyD"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="top" secondItem="cis-54-XCI" secondAttribute="bottom" constant="13" id="diO-jD-Hei"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="93" id="hBJ-ZJ-JZL"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="412" id="hu3-SR-y42"/>
-                                    <constraint firstItem="cis-54-XCI" firstAttribute="centerX" secondItem="THA-oH-eYP" secondAttribute="centerX" id="kGf-ht-p4g"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cvb-of-JSm" secondAttribute="bottom" constant="247" id="lXh-Mh-jUZ"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="centerX" secondItem="0M4-ag-YFT" secondAttribute="centerX" id="lho-mq-qYZ"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="100" id="n63-W3-Y2A"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="500" id="pMC-Pf-98c"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="100" id="sNU-W0-r7R"/>
-                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="125" id="siC-jY-ZaL"/>
-                                    <constraint firstItem="arN-01-4TE" firstAttribute="top" secondItem="c4u-H4-bmM" secondAttribute="bottom" constant="35" id="u2S-nZ-Uxe"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="71" id="vEK-TA-UsI"/>
-                                    <constraint firstAttribute="bottom" secondItem="0M4-ag-YFT" secondAttribute="bottom" constant="105" id="vTf-jC-TQ7"/>
-                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="58" id="y9L-kG-cKS"/>
-                                    <constraint firstItem="THA-oH-eYP" firstAttribute="bottom" secondItem="c4g-A8-agW" secondAttribute="bottomMargin" id="zTN-OV-xLc"/>
+                                    <constraint firstAttribute="trailing" secondItem="c4u-H4-bmM" secondAttribute="trailing" constant="20" id="2R0-w4-AUQ"/>
+                                    <constraint firstItem="cis-54-XCI" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="20" id="3hP-eb-vYF"/>
+                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="20" id="4PA-lF-rp1"/>
+                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="leading" secondItem="THA-oH-eYP" secondAttribute="trailing" constant="5" id="4T0-cC-wKA"/>
+                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="top" secondItem="5PK-vJ-Qgp" secondAttribute="bottom" constant="11" id="Ac8-lB-hFv"/>
+                                    <constraint firstAttribute="trailing" secondItem="0M4-ag-YFT" secondAttribute="trailing" constant="27" id="EWX-I3-dvK"/>
+                                    <constraint firstItem="c4u-H4-bmM" firstAttribute="top" secondItem="c4g-A8-agW" secondAttribute="top" constant="61" id="IKp-V3-nUa"/>
+                                    <constraint firstItem="5PK-vJ-Qgp" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="125" id="M92-bh-6gV"/>
+                                    <constraint firstAttribute="bottom" secondItem="THA-oH-eYP" secondAttribute="bottom" constant="256" id="RAh-dY-dQu"/>
+                                    <constraint firstItem="0M4-ag-YFT" firstAttribute="top" secondItem="cis-54-XCI" secondAttribute="bottom" constant="10" id="VSB-6c-Th3"/>
+                                    <constraint firstAttribute="trailing" secondItem="5PK-vJ-Qgp" secondAttribute="trailing" constant="125" id="cGo-h6-FFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cvb-of-JSm" secondAttribute="trailing" constant="20" id="d2e-Fm-ih5"/>
+                                    <constraint firstItem="THA-oH-eYP" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="30" id="faJ-Jv-P3W"/>
+                                    <constraint firstAttribute="trailing" secondItem="cis-54-XCI" secondAttribute="trailing" constant="20" id="hcY-gg-mC1"/>
+                                    <constraint firstItem="THA-oH-eYP" firstAttribute="top" secondItem="cis-54-XCI" secondAttribute="bottom" constant="10" id="kfZ-bf-FZB"/>
+                                    <constraint firstItem="cis-54-XCI" firstAttribute="top" secondItem="Cvb-of-JSm" secondAttribute="bottom" constant="8" id="pQR-Ke-8v8"/>
+                                    <constraint firstAttribute="bottom" secondItem="0M4-ag-YFT" secondAttribute="bottom" constant="256" id="u86-bP-3M9"/>
+                                    <constraint firstItem="5PK-vJ-Qgp" firstAttribute="top" secondItem="c4u-H4-bmM" secondAttribute="bottom" constant="8" id="yQd-3P-QZL"/>
+                                    <constraint firstItem="Cvb-of-JSm" firstAttribute="leading" secondItem="c4g-A8-agW" secondAttribute="leading" constant="20" id="zMp-jm-JUR"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Fpy-Gg-z8H"/>
-                                        <exclude reference="n63-W3-Y2A"/>
-                                        <exclude reference="sNU-W0-r7R"/>
-                                        <exclude reference="y9L-kG-cKS"/>
-                                        <exclude reference="4Mc-ka-qx7"/>
-                                        <exclude reference="9Yg-4z-6WX"/>
-                                        <exclude reference="LpE-3e-mFU"/>
-                                        <exclude reference="NO2-Zg-JT2"/>
-                                        <exclude reference="OmF-Bc-L3g"/>
-                                        <exclude reference="Skt-XN-ktR"/>
-                                        <exclude reference="Ulg-t2-dhi"/>
-                                        <exclude reference="lXh-Mh-jUZ"/>
-                                        <exclude reference="0Fa-US-kec"/>
-                                        <exclude reference="4gu-sp-OTe"/>
-                                        <exclude reference="LyA-gT-BVN"/>
-                                        <exclude reference="RE8-GK-Pgs"/>
-                                        <exclude reference="Wf4-EC-1p3"/>
-                                        <exclude reference="hu3-SR-y42"/>
-                                        <exclude reference="kGf-ht-p4g"/>
-                                        <exclude reference="6WG-wp-guO"/>
-                                        <exclude reference="OSh-w6-ETF"/>
-                                        <exclude reference="Uov-A2-Lzl"/>
-                                        <exclude reference="hBJ-ZJ-JZL"/>
-                                        <exclude reference="lho-mq-qYZ"/>
-                                        <exclude reference="Aw6-VU-xxs"/>
-                                        <exclude reference="Spd-Ty-J0l"/>
-                                        <exclude reference="aO0-w4-tRp"/>
-                                        <exclude reference="dEZ-e5-U3O"/>
-                                        <exclude reference="pMC-Pf-98c"/>
-                                        <exclude reference="siC-jY-ZaL"/>
-                                        <exclude reference="vTf-jC-TQ7"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICg-gE-dII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932.5" y="340.5"/>
+            <point key="canvasLocation" x="1053.5" y="340.5"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="CDL-tF-iqV">
@@ -202,7 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-Ij-jqn">
-                                <rect key="frame" x="61" y="113" width="235" height="30"/>
+                                <rect key="frame" x="39" y="98" width="235" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -213,52 +174,51 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKQ-ob-csZ">
-                                <rect key="frame" x="108" y="72" width="130" height="43"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqY-Lb-opo">
-                                <rect key="frame" x="61" y="151" width="235" height="30"/>
+                                <rect key="frame" x="39" y="136" width="235" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-50-wdV">
-                                <rect key="frame" x="131" y="309" width="112" height="35"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-os-a1D">
+                                <rect key="frame" x="39" y="212" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fel-bC-4w5">
+                                <rect key="frame" x="197" y="212" width="77" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="street address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFW-al-hKd">
+                                <rect key="frame" x="39" y="174" width="235" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-50-wdV" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="94" y="320" width="149" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButton:" destination="wN8-dZ-qDY" eventType="touchUpInside" id="pKy-vl-u55"/>
                                     <segue destination="WbV-hv-0fb" kind="show" id="2XI-5c-kxE"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zipcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-Rn-8ap">
-                                <rect key="frame" x="61" y="271" width="235" height="30"/>
+                                <rect key="frame" x="39" y="250" width="235" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-os-a1D">
-                                <rect key="frame" x="61" y="232" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fel-bC-4w5">
-                                <rect key="frame" x="219" y="233" width="77" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="street address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFW-al-hKd">
-                                <rect key="frame" x="61" y="194" width="235" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-Mi-HO3">
-                                <rect key="frame" x="83" y="383" width="209" height="189"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -298,6 +258,25 @@
                                 <color key="textColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-fJ-k9k" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="146" y="497" width="82" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="PROFILE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2V2-dX-iiW" kind="show" id="Yim-F1-wsE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -309,11 +288,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VZA-gL-bgW">
-                        <barButtonItem key="rightBarButtonItem" title="Profile" id="pJu-hQ-Jhh">
-                            <connections>
-                                <segue destination="2V2-dX-iiW" kind="show" id="aSd-Sz-e7b"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Profile" id="pJu-hQ-Jhh"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -321,9 +296,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVF-sQ-yqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="4EL-Xi-9Va"/>
             </objects>
-            <point key="canvasLocation" x="1453.5" y="340.5"/>
+            <point key="canvasLocation" x="1470.5" y="340.5"/>
         </scene>
         <!--My PetVC-->
         <scene sceneID="WVt-A9-IWY">
@@ -338,74 +312,100 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pet name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-8p-TD2">
-                                <rect key="frame" x="142" y="111" width="144" height="30"/>
+                                <rect key="frame" x="20" y="233" width="167" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="breed" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rja-YJ-FWO">
-                                <rect key="frame" x="142" y="149" width="144" height="30"/>
+                                <rect key="frame" x="23" y="291" width="296" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIn-NW-cZJ">
-                                <rect key="frame" x="126" y="72" width="121" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Your Pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIn-NW-cZJ">
+                                <rect key="frame" x="108" y="72" width="133" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tE-YR-Lh2">
-                                <rect key="frame" x="176" y="187" width="64" height="30"/>
+                                <rect key="frame" x="195" y="233" width="124" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAV-Jm-YeF">
-                                <rect key="frame" x="21" y="111" width="100" height="100"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogface" translatesAutoresizingMaskIntoConstraints="NO" id="BAV-Jm-YeF">
+                                <rect key="frame" x="116" y="111" width="98" height="98"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYl-Ao-xM9">
-                                <rect key="frame" x="33" y="225" width="76" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="PHOTO ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYl-Ao-xM9">
+                                <rect key="frame" x="26" y="141" width="56" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title=" " image="camera">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="takephotoButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="QWE-o1-FxH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-Se-z7M">
-                                <rect key="frame" x="31" y="269" width="80" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="GALLERY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-Se-z7M">
+                                <rect key="frame" x="244" y="131" width="57" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="Icon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="galleryphotoButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="m5Q-sM-uXx"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tell us about your pet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-T9-ISP">
-                                <rect key="frame" x="126" y="225" width="192" height="74"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tell us about your pet..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-T9-ISP" customClass="Fields">
+                                <rect key="frame" x="78" y="339" width="192" height="74"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="ZS0-5m-a9t">
-                                <rect key="frame" x="90" y="383" width="209" height="189"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-R4-0Z0">
-                                <rect key="frame" x="142" y="307" width="105" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-R4-0Z0" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="116" y="421" width="105" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                 <state key="normal" title="SUBMIT">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="profilesubmitButton:" destination="WbV-hv-0fb" eventType="touchUpInside" id="S5L-JQ-moq"/>
-                                    <segue destination="4c0-f7-yzj" kind="show" id="NOZ-Sk-RM7"/>
+                                    <segue destination="2V2-dX-iiW" kind="show" id="84G-8M-gEH"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eVd-PT-zMx">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="d1i-kz-mqp">
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2X6-fM-IVP">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="2X6-fM-IVP" firstAttribute="leading" secondItem="d1i-kz-mqp" secondAttribute="leading" id="GXs-Mb-Fdv"/>
+                                <constraint firstAttribute="bottom" secondItem="2X6-fM-IVP" secondAttribute="bottom" id="TFp-Ys-JQ2"/>
+                                <constraint firstItem="2X6-fM-IVP" firstAttribute="top" secondItem="d1i-kz-mqp" secondAttribute="top" id="kbS-by-kos"/>
+                                <constraint firstAttribute="trailing" secondItem="2X6-fM-IVP" secondAttribute="trailing" id="kxz-on-3yN"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="petageField" destination="5tE-YR-Lh2" id="oce-cp-RT1"/>
@@ -417,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBt-6l-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654.5" y="1156.5"/>
+            <point key="canvasLocation" x="1674.5" y="1156.5"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="WaN-M4-ynh">
@@ -432,66 +432,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watkinsville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e26-TB-dI7">
-                                <rect key="frame" x="167" y="205" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="141" y="202" width="93" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-lh-HTg">
-                                <rect key="frame" x="167" y="154" width="52" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Age 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-lh-HTg">
+                                <rect key="frame" x="136" y="141" width="77" height="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English Bulldog" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-70-bgg">
-                                <rect key="frame" x="167" y="169" width="119" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="141" y="168" width="151" height="39"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnglishBulldog" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-Zu-o22">
+                                <rect key="frame" x="27" y="114" width="106" height="102"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-Hf-tdK">
-                                <rect key="frame" x="167" y="124" width="64" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="141" y="90" width="108" height="54"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="33"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T31-0d-4wV">
-                                <rect key="frame" x="114" y="357" width="95" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T31-0d-4wV" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="114" y="368" width="95" height="52"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="LOST ALERT">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="LOST ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="6sO-bA-Tbx" kind="show" id="vqP-8M-Npz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKA-Kx-WtJ">
-                                <rect key="frame" x="42" y="352" width="64" height="62"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="PALS"/>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-62-8o3">
-                                <rect key="frame" x="65" y="234" width="244" height="96"/>
+                                <rect key="frame" x="11" y="277" width="355" height="83"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Dudley is very sweet, but can be very feisty if he is hungry. We take him to the Georgia games and he loves the UGA fight song. If you hum the song, he will lick you.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NB-g8-amV">
-                                <rect key="frame" x="222" y="356" width="75" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NB-g8-amV" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="217" y="366" width="106" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="AddPet"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="ADD PET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-1U-9TH">
-                                <rect key="frame" x="262" y="205" width="24" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="242" y="206" width="27" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-9n-noE">
-                                <rect key="frame" x="83" y="412" width="209" height="189"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCV-nG-7lh">
                                 <rect key="frame" x="114" y="72" width="121" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -499,13 +514,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnglishBulldog" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-Zu-o22">
-                                <rect key="frame" x="53" y="124" width="106" height="102"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKA-Kx-WtJ" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="20" y="368" width="86" height="53"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="PALS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4c0-f7-yzj" kind="show" id="SFl-EL-v6e"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5Bd-eG-zMN">
+                        <nil key="title"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -520,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ty4-cd-bSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948.5" y="362.5"/>
+            <point key="canvasLocation" x="1963.5" y="374.5"/>
         </scene>
         <!--LostPet-->
         <scene sceneID="eAW-jQ-M25">
@@ -549,23 +584,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-MJ-s7C">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDh-MJ-s7C" customClass="buttons" customModule="PawPals" customModuleProvider="target">
                                 <rect key="frame" x="43" y="97" width="84" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CURRENT ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="currentLocButton:" destination="6sO-bA-Tbx" eventType="touchUpInside" id="i6b-mg-Kxa"/>
                                     <segue destination="hRe-Cq-MUO" kind="show" id="qXr-hC-6Gn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-T8-EHh">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-T8-EHh" customClass="buttons" customModule="PawPals" customModuleProvider="target">
                                 <rect key="frame" x="156" y="97" width="94" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Home">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="homeLocButton:" destination="6sO-bA-Tbx" eventType="touchUpInside" id="udt-9h-LSi"/>
                                     <segue destination="hRe-Cq-MUO" kind="show" id="K4C-bK-rYV"/>
@@ -583,12 +634,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a68-4X-6eL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a68-4X-6eL" customClass="buttons" customModule="PawPals" customModuleProvider="target">
                                 <rect key="frame" x="93" y="292" width="112" height="47"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="lostLoc:" destination="6sO-bA-Tbx" eventType="touchUpInside" id="7bQ-Nz-vkx"/>
                                     <segue destination="hRe-Cq-MUO" kind="show" id="FRt-jL-pn0"/>
@@ -599,11 +658,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="kav-He-93P">
-                                <rect key="frame" x="65" y="418" width="209" height="189"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -617,7 +673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4K-S5-kjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2424.5" y="362.5"/>
+            <point key="canvasLocation" x="2418.5" y="374.5"/>
         </scene>
         <!--LostprofileVC-->
         <scene sceneID="MdZ-fp-cJO">
@@ -632,7 +688,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EnglishBulldog" translatesAutoresizingMaskIntoConstraints="NO" id="dcG-lF-W5m">
-                                <rect key="frame" x="59" y="93" width="106" height="102"/>
+                                <rect key="frame" x="59" y="86" width="106" height="102"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-Zb-yPU">
                                 <rect key="frame" x="173" y="80" width="64" height="30"/>
@@ -652,65 +708,102 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watkinsville, GA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-QC-wwX">
-                                <rect key="frame" x="173" y="167" width="123" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watkinsville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-QC-wwX">
+                                <rect key="frame" x="173" y="167" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9b9-2X-i94">
-                                <rect key="frame" x="59" y="196" width="244" height="96"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Dudley is very sweet, but can be very feisty if he is hungry. We take him to the Georgia games and he loves the UGA fight song. If you hum the song, he will lick you.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-L0-TE4">
-                                <rect key="frame" x="190" y="377" width="68" height="62"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="FOUND">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-L0-TE4" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="178" y="344" width="99" height="45"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="FOUND!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbt-d6-DvE">
-                                <rect key="frame" x="86" y="341" width="176" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbt-d6-DvE" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="70" y="397" width="213" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Where's My Pet">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="wheresMyPetButton:" destination="hRe-Cq-MUO" eventType="touchUpInside" id="des-4q-Njl"/>
                                     <segue destination="Fo8-Vn-uv2" kind="show" id="KIg-fS-rLl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-F6-7b6">
-                                <rect key="frame" x="86" y="309" width="176" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RD-F6-7b6" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="70" y="300" width="213" height="39"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Share on Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kg-qr-s66">
-                                <rect key="frame" x="86" y="377" width="64" height="62"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kg-qr-s66" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="75" y="347" width="95" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="PALS">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="4c0-f7-yzj" kind="show" id="mgr-dO-MGa"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pawdog" translatesAutoresizingMaskIntoConstraints="NO" id="BKw-px-9dj">
-                                <rect key="frame" x="83" y="429" width="209" height="189"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-Zs-VXd">
+                                <rect key="frame" x="272" y="167" width="24" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9b9-2X-i94">
+                                <rect key="frame" x="8" y="196" width="244" height="96"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Dudley is very sweet, but can be very feisty if he is hungry. We take him to the Georgia games and he loves the UGA fight song. If you hum the song, he will lick you.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lostPetName" destination="n5A-Zb-yPU" id="NpG-eS-Uat"/>
+                        <outlet property="lostpetAge" destination="Wb7-Ya-Zjb" id="gE5-8T-MLN"/>
+                        <outlet property="lostpetBreed" destination="tdz-gE-DPS" id="uBF-ea-Pbj"/>
+                        <outlet property="lostpetCity" destination="UjO-QC-wwX" id="MaF-I6-cD8"/>
+                        <outlet property="lostpetDescript" destination="9b9-2X-i94" id="YWO-bZ-o0d"/>
+                        <outlet property="lostpetImage" destination="dcG-lF-W5m" id="KyW-CO-QPq"/>
+                        <outlet property="lostpetState" destination="0A1-Zs-VXd" id="PIh-Ca-Rro"/>
+                        <outlet property="nameLostLabel" destination="n5A-Zb-yPU" id="nlM-eF-g7U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3g-2J-RpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2930.5" y="362.5"/>
+            <point key="canvasLocation" x="2930.5" y="381.5"/>
         </scene>
         <!--Mylostpet MapVC-->
         <scene sceneID="tQX-VD-avd">
@@ -727,12 +820,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f7x-ur-5m2">
                                 <rect key="frame" x="0.0" y="21" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-zR-XNv">
-                                <rect key="frame" x="147" y="53" width="54" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-zR-XNv" customClass="buttons" customModule="PawPals" customModuleProvider="target">
+                                <rect key="frame" x="148" y="89" width="54" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Profile">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="hRe-Cq-MUO" kind="show" id="4u9-sK-oQh"/>
                                 </connections>
@@ -771,13 +869,13 @@
         <scene sceneID="KSa-f5-jkq">
             <objects>
                 <tableViewController id="4c0-f7-yzj" customClass="PetPhotoTVC" customModule="PawPals" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j0N-6A-zoL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="178" sectionHeaderHeight="28" sectionFooterHeight="28" id="j0N-6A-zoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="178" id="zsa-Sg-PhH" customClass="petCell" customModule="PawPals" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="178"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="178"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zsa-Sg-PhH" id="NPh-fk-YGH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
@@ -787,31 +885,31 @@
                                             <rect key="frame" x="36" y="19" width="123" height="116"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy6-Kx-Zvc">
-                                            <rect key="frame" x="198" y="19" width="64" height="30"/>
+                                            <rect key="frame" x="167" y="25" width="64" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English Bulldog" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMd-K4-cX1">
-                                            <rect key="frame" x="196" y="63" width="119" height="38"/>
+                                            <rect key="frame" x="167" y="58" width="119" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs6-iz-eAa">
-                                            <rect key="frame" x="198" y="47" width="52" height="21"/>
+                                            <rect key="frame" x="167" y="47" width="52" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watkinsville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqD-Pp-NNj">
-                                            <rect key="frame" x="198" y="98" width="91" height="21"/>
+                                            <rect key="frame" x="167" y="91" width="91" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDj-a1-bbh">
-                                            <rect key="frame" x="297" y="98" width="24" height="21"/>
+                                            <rect key="frame" x="266" y="91" width="24" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -838,7 +936,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kt8-ym-AhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2343.5" y="1156.5"/>
+            <point key="canvasLocation" x="2124.5" y="1156.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02a-0P-zCm">
@@ -849,6 +947,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aRI-nn-M2R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.91372549020000005" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VzI-X8-yFZ">
@@ -866,14 +965,14 @@
     </scenes>
     <resources>
         <image name="EnglishBulldog" width="3422" height="2835"/>
-        <image name="Screen Shot 2015-12-15 at 10.59.00 AM" width="194" height="72"/>
-        <image name="Screen Shot 2015-12-15 at 10.59.22 AM" width="193" height="69"/>
-        <image name="Screen Shot 2015-12-15 at 11.01.37 AM" width="277" height="263"/>
-        <image name="pawdog" width="238" height="211"/>
+        <image name="Icon" width="57" height="57"/>
+        <image name="camera" width="51" height="38"/>
+        <image name="dogface" width="144" height="116"/>
+        <image name="logo" width="338" height="286"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qXr-hC-6Gn"/>
-        <segue reference="Esd-h0-Tzr"/>
-        <segue reference="NOZ-Sk-RM7"/>
+        <segue reference="Yim-F1-wsE"/>
+        <segue reference="mgr-dO-MGa"/>
     </inferredMetricsTieBreakers>
 </document>

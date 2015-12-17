@@ -43,19 +43,21 @@ class PetPhotoTVC: UITableViewController {
                 
                 print(returnedInfo)
                 
-                self.users = returnedInfo?["pets"] as? [[String:AnyObject]] ?? []
+                self.pets = returnedInfo?["pets"] as? [[String:AnyObject]] ?? []
+                
+                print(self.pets,"boom")
                 
                 self.tableView.reloadData()
                 
             }
         }
         
-        var users: [[String:AnyObject]] = []
+        var pets: [[String:AnyObject]] = []
         
         override func viewWillAppear(animated: Bool) {
             super.viewWillAppear(animated)
             
-            //self.navigationController?.navigationBarHidden = false
+            self.navigationController?.navigationBarHidden = false
             
             tableView.reloadData()
             
@@ -66,20 +68,25 @@ class PetPhotoTVC: UITableViewController {
         }
         
         // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pets.count
+    }
         
-        func petTableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
-            return users.count
-        }
-        
-        
-        func petTableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        func petTableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            
+//            print(pets.count)
+//            return pets.count
+//        }
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             // #warning Incomplete implementation, return the number of rows
             
             
             let cell = tableView.dequeueReusableCellWithIdentifier("petCell", forIndexPath: indexPath) as! petCell
             
-            guard let pet = users[indexPath.row]["pets"] as? [String:AnyObject] else { return cell }
+            let pet = pets[indexPath.row]
             
             cell.petInfo = pet
             
@@ -180,7 +187,6 @@ class PetPhotoTVC: UITableViewController {
             if segue.identifier == "Detail" {
                 
                 guard let cell = sender as? petCell else { return }
-                guard let indexPath = tableView.indexPathForCell(cell) else { return }
                 
                 let detailVC = segue.destinationViewController as? ProfileVC
                 

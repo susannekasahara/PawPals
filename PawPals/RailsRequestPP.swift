@@ -166,7 +166,7 @@ class RailsRequest: NSObject {
         }
     }
     //SET UP PET Profile
-    func profileWithUsername(petName: String, petAge: String, petBreed: String, petDescription: String, success: (Bool) -> ()) {
+    func profileWithUsername(petName: String, petAge: String, petBreed: String, petDescription: String, petImageURL: String, success: (Bool) -> ()) {
         
         var info = RequestInfo()
         
@@ -179,6 +179,7 @@ class RailsRequest: NSObject {
             "age" : petAge,
             "breed" : petBreed,
             "description": petDescription,
+            "mobile_url": petImageURL
             
         ]
         
@@ -186,7 +187,6 @@ class RailsRequest: NSObject {
             
             print(returnedInfo)
             
-            // dive into "pet"
             
             if let pet = returnedInfo?["pet"] as? [String:AnyObject] {
                 
@@ -195,6 +195,7 @@ class RailsRequest: NSObject {
                     self.petID = "\(key)"
                     success(true)
                     print(self.petID)
+                    
                     
                     
                 }

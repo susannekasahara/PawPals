@@ -15,7 +15,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordLoginField: UITextField!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
+            UIKeyboardWillShowNotification, object: nil);
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+
         print(RailsRequest.session().token)
     }
     
@@ -41,5 +47,29 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
         })
     }
+    
+    
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        self.view.frame.origin.y = 0
+        
+        print(self.view.frame.origin.y)
+        
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        
+        self.view.frame.origin.y = 0
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+
+    
     
 }

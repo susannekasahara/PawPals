@@ -38,7 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         //myMapView.showsUserLocation
         
-        lManager.startUpdatingLocation()
+//        lManager.startUpdatingLocation()
         
         lManager.requestLocation()
         

@@ -20,6 +20,8 @@
 		821789901C20B7A5004B6DD6 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789851C20B7A4004B6DD6 /* AFURLRequestSerialization.m */; };
 		821789911C20B7A5004B6DD6 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789871C20B7A4004B6DD6 /* AFURLResponseSerialization.m */; };
 		821789921C20B7A5004B6DD6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */; };
+		821789941C20CDB9004B6DD6 /* buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821789931C20CDB9004B6DD6 /* buttons.swift */; };
+		821789961C21D4DD004B6DD6 /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821789951C21D4DD004B6DD6 /* Fields.swift */; };
 		826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826ADB031C0CECDD0020B974 /* MyPetVC.swift */; };
 		82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2C1C0B40C300430839 /* AppDelegate.swift */; };
 		82728A321C0B40C300430839 /* PPUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82728A301C0B40C300430839 /* PPUser.storyboard */; };
@@ -70,12 +72,14 @@
 		821789871C20B7A4004B6DD6 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		821789881C20B7A4004B6DD6 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		821789931C20CDB9004B6DD6 /* buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttons.swift; sourceTree = "<group>"; };
+		821789951C21D4DD004B6DD6 /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
 		826ADB031C0CECDD0020B974 /* MyPetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetVC.swift; sourceTree = "<group>"; };
 		82728A291C0B40C300430839 /* PawPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82728A2C1C0B40C300430839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PawPals/AppDelegate.swift; sourceTree = "<group>"; };
 		82728A311C0B40C300430839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PPUser.storyboard; sourceTree = "<group>"; };
 		82728A341C0B40C300430839 /* PawPals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PawPals.xcdatamodel; sourceTree = "<group>"; };
-		82728A361C0B40C300430839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PawPals/Assets.xcassets; sourceTree = "<group>"; };
+		82728A361C0B40C300430839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82728A391C0B40C300430839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82728A3B1C0B40C300430839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = PawPals/Info.plist; sourceTree = "<group>"; };
 		82728A411C0B419400430839 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -143,6 +147,9 @@
 				82C914F41C196BEE001DA723 /* wheresMyPet.swift */,
 				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
 				8217896A1C2097B7004B6DD6 /* petCell.swift */,
+				821789931C20CDB9004B6DD6 /* buttons.swift */,
+				821789951C21D4DD004B6DD6 /* Fields.swift */,
+				82728A361C0B40C300430839 /* Assets.xcassets */,
 			);
 			path = PawPals;
 			sourceTree = "<group>";
@@ -177,7 +184,6 @@
 				821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */,
 				82728A301C0B40C300430839 /* PPUser.storyboard */,
 				82728A2C1C0B40C300430839 /* AppDelegate.swift */,
-				82728A361C0B40C300430839 /* Assets.xcassets */,
 				82728A381C0B40C300430839 /* LaunchScreen.storyboard */,
 				82728A3B1C0B40C300430839 /* Info.plist */,
 				82728A331C0B40C300430839 /* PawPals.xcdatamodeld */,
@@ -259,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821789961C21D4DD004B6DD6 /* Fields.swift in Sources */,
 				82728A351C0B40C300430839 /* PawPals.xcdatamodeld in Sources */,
 				8217896B1C2097B7004B6DD6 /* petCell.swift in Sources */,
 				82D9B68B1C120EDD00A32B2B /* palsTVC.swift in Sources */,
@@ -279,6 +286,7 @@
 				821789921C20B7A5004B6DD6 /* AFURLSessionManager.m in Sources */,
 				82975D581C13412C00728563 /* mylostpetMapVC.swift in Sources */,
 				8217898D1C20B7A5004B6DD6 /* AFNetworkReachabilityManager.m in Sources */,
+				821789941C20CDB9004B6DD6 /* buttons.swift in Sources */,
 				821789911C20B7A5004B6DD6 /* AFURLResponseSerialization.m in Sources */,
 				821789901C20B7A5004B6DD6 /* AFURLRequestSerialization.m in Sources */,
 				826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */,

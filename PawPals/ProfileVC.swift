@@ -32,6 +32,7 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //if let petname = pet["name"] as? String {
         
        // petnameLabel.text = petname

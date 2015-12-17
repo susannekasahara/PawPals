@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MyPetVC: UIViewController {
+class MyPetVC: UIViewController, UITextFieldDelegate {
     
     var savedImages: [String] = []
     
     var imagePicker = UIImagePickerController()
+    
+    var imageURLString: String = ""
     
     @IBOutlet weak var petnameField: UITextField!
     
@@ -68,32 +70,53 @@ class MyPetVC: UIViewController {
         
         
         
-        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let petDescription = petdescriptField.text else { return }
+        guard let petName = petnameField.text, let petAge = petageField.text, let petBreed = petbreedField.text, let petDescription = petdescriptField.text  else { return }
         
         print("registerig pet")
         
-        RailsRequest.session().profileWithUsername(petName, petAge: petAge, petBreed: petBreed, petDescription: petDescription, success:  {
-            didProfile in
+        RailsRequest.session().profileWithUsername(petName, petAge: petAge, petBreed: petBreed, petDescription: petDescription, petImageURL: imageURLString) { (success) -> () in
             
-            if didProfile {
-                
-                
-            } else {
-                
-                
-                
-            }
-            
-        })
+        }
+        
     }
     
-    
-    
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
+            UIKeyboardWillShowNotification, object: nil);
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+
         print(RailsRequest.session().token)
         
     }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if petnameField.isFirstResponder()  {
+            
+            print(petnameField.isFirstResponder()) // test for nameSearchField
+            
+            
+            
+        } else {
+            
+            self.view.frame.origin.y = -150
+        }
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        
+        self.view.frame.origin.y = 0
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+
     
 }
 
@@ -132,10 +155,11 @@ extension MyPetVC: UIImagePickerControllerDelegate, UINavigationControllerDelega
                     
                     if let url = urlResponse.URL?.absoluteString {
                         
+                        
+                        self.imageURLString = url
                         // send request to rails with "url"
                         
-                        
-                        
+                       
                     }
                 }
                 
@@ -150,6 +174,8 @@ extension MyPetVC: UIImagePickerControllerDelegate, UINavigationControllerDelega
         // tell collectionView to reload
         
     }
+    
+    
 }
 
         

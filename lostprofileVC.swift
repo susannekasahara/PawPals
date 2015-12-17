@@ -10,27 +10,26 @@ import UIKit
 
 class lostprofileVC: UIViewController {
     
+    var petInfo: [String:AnyObject]!
+    
+    @IBOutlet weak var lostPetName: UILabel!
+    
+    @IBOutlet weak var lostpetAge: UILabel!
+    
+    @IBOutlet weak var lostpetBreed: UILabel!
+    
+    @IBOutlet weak var lostpetCity: UILabel!
+    
+    @IBOutlet weak var lostpetState: UILabel!
+    
+    @IBOutlet weak var lostpetImage: UIImageView!
+    
+    @IBOutlet weak var lostpetDescript: UITextView!
+    
     
     @IBAction func wheresMyPetButton(sender: AnyObject) {
-        
-    }
     
     
-//    let VC = self.storyboard?.instantiateViewControllerWithIdentifier("lostpetmapVC") as? MapViewController
-//    
-//    self.navigationController?.pushViewController(VC!, animated: true)
-//    //
-//    
-//    } else {
-//    
-//    // throw an alert error that login failed
-//    
-//}
-//}
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
 }
 }
+

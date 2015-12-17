@@ -20,8 +20,6 @@ class mylostpetMapVC: UIViewController, MKMapViewDelegate {
     var longitude: Double = 0
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
