@@ -780,7 +780,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="9b9-2X-i94">
-                                <rect key="frame" x="8" y="196" width="244" height="96"/>
+                                <rect key="frame" x="48" y="196" width="244" height="96"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Dudley is very sweet, but can be very feisty if he is hungry. We take him to the Georgia games and he loves the UGA fight song. If you hum the song, he will lick you.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -798,7 +798,6 @@
                         <outlet property="lostpetDescript" destination="9b9-2X-i94" id="YWO-bZ-o0d"/>
                         <outlet property="lostpetImage" destination="dcG-lF-W5m" id="KyW-CO-QPq"/>
                         <outlet property="lostpetState" destination="0A1-Zs-VXd" id="PIh-Ca-Rro"/>
-                        <outlet property="nameLostLabel" destination="n5A-Zb-yPU" id="nlM-eF-g7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3g-2J-RpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -971,8 +970,8 @@
         <image name="logo" width="338" height="286"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qXr-hC-6Gn"/>
-        <segue reference="Yim-F1-wsE"/>
+        <segue reference="Esd-h0-Tzr"/>
         <segue reference="mgr-dO-MGa"/>
+        <segue reference="qXr-hC-6Gn"/>
     </inferredMetricsTieBreakers>
 </document>
