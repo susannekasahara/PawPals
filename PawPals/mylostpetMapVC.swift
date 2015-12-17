@@ -13,8 +13,26 @@ import MapKit
 
 class mylostpetMapVC: UIViewController, MKMapViewDelegate {
     
-    @IBOutlet weak var mylostpetMap: MKMapView!
     
+    
+    @IBOutlet weak var mylostpetMap: MKMapView! {
+        
+        
+    
+    didSet {
+    
+    mylostpetMap.mapType = .Standard
+    mylostpetMap.zoomEnabled = true
+    
+        
+        self.mylostpetMap.showAnnotations(self.mylostpetMap.annotations, animated: true)
+        
+        
+    
+    }
+}
+
+
     var petID: Int = 0
     var latitude: Double = 0
     var longitude: Double = 0
@@ -61,6 +79,7 @@ class mylostpetMapVC: UIViewController, MKMapViewDelegate {
         }
         
         
+        
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -80,27 +99,30 @@ class mylostpetMapVC: UIViewController, MKMapViewDelegate {
         
         return annotationView
         
+        
+        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLoction: CLLocation = locations[0]
         let latitude = userLoction.coordinate.latitude
         let longitude = userLoction.coordinate.longitude
-        let latDelta: CLLocationDegrees = 0.05
-        let lonDelta: CLLocationDegrees = 0.05
+        let latDelta: CLLocationDegrees = 0.075
+        let lonDelta: CLLocationDegrees = 0.075
         let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
         let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
         let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+    
         self.mylostpetMap.setRegion(region, animated: true)
         self.mylostpetMap.showsUserLocation = true
+       
+
+
     }
+
 }
 
+//var span = MKCoordinateSpanMake(0.075, 0.075)
+//var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: long), span: span)
+//mapView.setRegion(region, animated: true)
 
-
-
-
-
-
-
-   

@@ -253,13 +253,13 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🐶LOST PETS🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00O-nq-n2T">
-                                <rect key="frame" x="61" y="75" width="252" height="43"/>
+                                <rect key="frame" x="47" y="75" width="252" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="0.9137254901960784" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-fJ-k9k" customClass="buttons" customModule="PawPals" customModuleProvider="target">
-                                <rect key="frame" x="146" y="497" width="82" height="36"/>
+                                <rect key="frame" x="124" y="497" width="82" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="PROFILE">
@@ -970,8 +970,8 @@
         <image name="logo" width="338" height="286"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Esd-h0-Tzr"/>
-        <segue reference="mgr-dO-MGa"/>
+        <segue reference="Yim-F1-wsE"/>
         <segue reference="qXr-hC-6Gn"/>
+        <segue reference="mgr-dO-MGa"/>
     </inferredMetricsTieBreakers>
 </document>

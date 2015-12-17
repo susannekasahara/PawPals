@@ -15,7 +15,17 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    @IBOutlet weak var myMapView: MKMapView!
+    @IBOutlet weak var myMapView: MKMapView! {
+        
+        didSet {
+            
+            myMapView.mapType = .Standard
+            myMapView.zoomEnabled = true
+            self.myMapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true);
+            
+        }
+    }
+    
     
     let lManager = CLLocationManager()
     
@@ -32,13 +42,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         lManager.delegate = self
         
-        myMapView.annotations
+        //myMapView.annotations
         
         //or
         
-        //myMapView.showsUserLocation
+        myMapView.showsUserLocation = true
         
-//        lManager.startUpdatingLocation()
+        //lManager.startUpdatingLocation()
         
         lManager.requestLocation()
         
