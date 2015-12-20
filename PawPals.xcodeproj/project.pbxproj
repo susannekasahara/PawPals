@@ -22,6 +22,7 @@
 		821789921C20B7A5004B6DD6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */; };
 		821789941C20CDB9004B6DD6 /* buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821789931C20CDB9004B6DD6 /* buttons.swift */; };
 		821789961C21D4DD004B6DD6 /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821789951C21D4DD004B6DD6 /* Fields.swift */; };
+		8244B4971C2311D100161D7A /* Email-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8244B4961C2311D100161D7A /* Email-icon.png */; };
 		826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826ADB031C0CECDD0020B974 /* MyPetVC.swift */; };
 		82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82728A2C1C0B40C300430839 /* AppDelegate.swift */; };
 		82728A321C0B40C300430839 /* PPUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82728A301C0B40C300430839 /* PPUser.storyboard */; };
@@ -38,7 +39,6 @@
 		82975D581C13412C00728563 /* mylostpetMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82975D571C13412C00728563 /* mylostpetMapVC.swift */; };
 		82BCA8F11C0F615A00B88330 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA8F01C0F615A00B88330 /* MapViewController.swift */; };
 		82C914F31C175FE2001DA723 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C914F21C175FE2001DA723 /* CoreLocation.framework */; };
-		82C914F51C196BEE001DA723 /* wheresMyPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C914F41C196BEE001DA723 /* wheresMyPet.swift */; };
 		82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B65F1C0FA4E400A32B2B /* keys.swift */; };
 		82D9B68B1C120EDD00A32B2B /* palsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B68A1C120EDD00A32B2B /* palsTVC.swift */; };
 		82D9B68D1C1214EF00A32B2B /* lostpetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B68C1C1214EF00A32B2B /* lostpetVC.swift */; };
@@ -74,6 +74,7 @@
 		821789891C20B7A4004B6DD6 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		821789931C20CDB9004B6DD6 /* buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttons.swift; sourceTree = "<group>"; };
 		821789951C21D4DD004B6DD6 /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
+		8244B4961C2311D100161D7A /* Email-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Email-icon.png"; sourceTree = "<group>"; };
 		826ADB031C0CECDD0020B974 /* MyPetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetVC.swift; sourceTree = "<group>"; };
 		82728A291C0B40C300430839 /* PawPals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82728A2C1C0B40C300430839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PawPals/AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		82BCA8EF1C0E0D4200B88330 /* pplogin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = pplogin.playground; path = PawPals/pplogin.playground; sourceTree = "<group>"; };
 		82BCA8F01C0F615A00B88330 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		82C914F21C175FE2001DA723 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		82C914F41C196BEE001DA723 /* wheresMyPet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = wheresMyPet.swift; path = ../wheresMyPet.swift; sourceTree = "<group>"; };
 		82D9B65F1C0FA4E400A32B2B /* keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
 		82D9B68A1C120EDD00A32B2B /* palsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = palsTVC.swift; sourceTree = "<group>"; };
 		82D9B68C1C1214EF00A32B2B /* lostpetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = lostpetVC.swift; path = ../lostpetVC.swift; sourceTree = "<group>"; };
@@ -144,10 +144,10 @@
 				82975D541C13311A00728563 /* lostprofileVC.swift */,
 				82728A471C0B7E2300430839 /* PetPhotoTVC.swift */,
 				82975D571C13412C00728563 /* mylostpetMapVC.swift */,
-				82C914F41C196BEE001DA723 /* wheresMyPet.swift */,
 				82728A4D1C0BBF2600430839 /* RailsRequestPP.swift */,
 				8217896A1C2097B7004B6DD6 /* petCell.swift */,
 				821789931C20CDB9004B6DD6 /* buttons.swift */,
+				8244B4961C2311D100161D7A /* Email-icon.png */,
 				821789951C21D4DD004B6DD6 /* Fields.swift */,
 				82728A361C0B40C300430839 /* Assets.xcassets */,
 			);
@@ -251,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8244B4971C2311D100161D7A /* Email-icon.png in Resources */,
 				82728A461C0B41F000430839 /* login.storyboard in Resources */,
 				82728A3A1C0B40C300430839 /* LaunchScreen.storyboard in Resources */,
 				82728A371C0B40C300430839 /* Assets.xcassets in Resources */,
@@ -291,7 +292,6 @@
 				821789901C20B7A5004B6DD6 /* AFURLRequestSerialization.m in Sources */,
 				826ADB041C0CECDD0020B974 /* MyPetVC.swift in Sources */,
 				82728A2D1C0B40C300430839 /* AppDelegate.swift in Sources */,
-				82C914F51C196BEE001DA723 /* wheresMyPet.swift in Sources */,
 				821789761C20B778004B6DD6 /* AFAmazonS3ResponseSerializer.m in Sources */,
 				82D9B6601C0FA4E400A32B2B /* keys.swift in Sources */,
 				82728A441C0B41BA00430839 /* RegisterVC.swift in Sources */,
